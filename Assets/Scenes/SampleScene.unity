@@ -271,8 +271,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   target: {fileID: 1852422100}
-  offset: {x: 0, y: 2, z: -5}
-  smoothSpeed: 0.125
+  distance: 7
+  minDistance: 2
+  maxDistance: 10
+  height: 2
+  mouseSensitivity: 1.5
+  minVerticalAngle: -30
+  maxVerticalAngle: 60
+  positionSmoothTime: 0.1
+  rotationSmoothTime: 0.01
+  lookAtOffset: {x: 0, y: 1.5, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   moveSpeed: 11
+  rotationSpeed: 10
   jumpForce: 10
   cameraTransform: {fileID: 0}
 --- !u!54 &1852422096
@@ -1635,9 +1644,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &1852422097
 CapsuleCollider:
   m_ObjectHideFlags: 0
