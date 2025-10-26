@@ -609,7 +609,7 @@ MonoBehaviour:
   minDistance: 2
   maxDistance: 10
   height: 2
-  mouseSensitivity: 1.5
+  mouseSensitivity: 1.8
   minVerticalAngle: -30
   maxVerticalAngle: 60
   positionSmoothTime: 0.1
@@ -1320,7 +1320,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &658572356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1900,7 +1900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &834049364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3430,7 +3430,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852422094}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: e6bb69001b949c74daade3d242e33a68, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -3760,7 +3760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1993844791
 MonoBehaviour:
   m_ObjectHideFlags: 0

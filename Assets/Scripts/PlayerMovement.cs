@@ -78,7 +78,25 @@ public class PlayerMovement3D : MonoBehaviour
 
     void OnCollisionStay(Collision collision)
     {
-        isGrounded = true;
+        // Check if any contact point is on a walkable surface (not too steep)
+        foreach (ContactPoint contact in collision.contacts)
+        {
+            // Check the angle of the surface normal
+            // If the surface is pointing mostly upward, it's ground
+            float angle = Vector3.Dot(contact.normal, Vector3.up);
+            
+            // 0.7 means surfaces up to ~45 degrees are walkable
+            // Lower value = can walk on steeper surfaces
+            // Higher value = only flat surfaces are walkable
+            if (angle > 0.7f)
+            {
+                isGrounded = true;
+                return;
+            }
+        }
+        
+        // If we got here, no walkable surface was found
+        isGrounded = false;
     }
 
     void OnCollisionExit(Collision collision)
