@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8424958c39ea354393823052d19bc36, type: 3}
+  m_Name: 58CC8FE1-865C-4C1A-81DC-EB8C7DCA5DF1
+  m_EditorClassIdentifier: AK.Wwise.Unity.API.WwiseTypes::WwiseEventReference
+  objectName: Player_Jump
+  id: 1305133589
+  guid: 58CC8FE1-865C-4C1A-81DC-EB8C7DCA5DF1
+  AutoBank: {fileID: 11400000, guid: c705780c651585941af839201c5c56a3, type: 2}
+  IsInUserDefinedSoundBank: 0
