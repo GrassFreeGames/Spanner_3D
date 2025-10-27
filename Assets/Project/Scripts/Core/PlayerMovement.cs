@@ -5,17 +5,17 @@ public class PlayerMovement3D : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed = 5f;
-    
+
     [Header("Rotation")]
     [Tooltip("How fast the player rotates to face movement direction")]
     public float rotationSpeed = 10f;
-    
+
     [Header("Jump")]
     public float jumpForce = 5f;
-    
+
     [Header("References")]
     public Transform cameraTransform;
-    
+
     private Rigidbody rb;
     private Vector3 moveDirection;
     private bool isGrounded;
@@ -23,10 +23,10 @@ public class PlayerMovement3D : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        
+
         // CRITICAL: Freeze rotation so character stays upright
         rb.freezeRotation = true;
-        
+
         if (cameraTransform == null)
             cameraTransform = Camera.main.transform;
     }
@@ -36,7 +36,7 @@ public class PlayerMovement3D : MonoBehaviour
         // Read input
         float horizontal = 0;
         float vertical = 0;
-        
+
         if (Keyboard.current != null)
         {
             if (Keyboard.current.aKey.isPressed) horizontal = -1;
@@ -84,7 +84,7 @@ public class PlayerMovement3D : MonoBehaviour
             // Check the angle of the surface normal
             // If the surface is pointing mostly upward, it's ground
             float angle = Vector3.Dot(contact.normal, Vector3.up);
-            
+
             // 0.7 means surfaces up to ~45 degrees are walkable
             // Lower value = can walk on steeper surfaces
             // Higher value = only flat surfaces are walkable
@@ -94,7 +94,7 @@ public class PlayerMovement3D : MonoBehaviour
                 return;
             }
         }
-        
+
         // If we got here, no walkable surface was found
         isGrounded = false;
     }
@@ -103,4 +103,6 @@ public class PlayerMovement3D : MonoBehaviour
     {
         isGrounded = false;
     }
+}
+
 }
