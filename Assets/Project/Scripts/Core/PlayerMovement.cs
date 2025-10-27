@@ -104,5 +104,3 @@ public class PlayerMovement3D : MonoBehaviour
         isGrounded = false;
     }
 }
-
-}
