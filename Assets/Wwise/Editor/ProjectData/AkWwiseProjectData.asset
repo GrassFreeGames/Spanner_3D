@@ -80,7 +80,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d3164fe8003b2d4b843c874de71a3d51
     GuidInternal: 
-    m_lastTime: -8584401393246190641
+    m_lastTime: -8584398872454435211
     List:
     - name: Player_Jump
       guid: e18fcc585c861a4c81dceb8c7dca5df1
@@ -99,6 +99,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.37875283
       minDuration: 0.37875283
+    - name: Player_Spawn_In
+      guid: c69f7bc7a75c284489a8d52054d87b88
+      id: 2311955112
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Player_Spawn_In
+        ObjectType: 3
+        guid: c69f7bc7a75c284489a8d52054d87b88
+      Path: Events\Default Work Unit\Player_Spawn_In
+      maxAttenuation: 0
+      maxDuration: 3.597052
+      minDuration: 3.597052
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -156,7 +173,7 @@ MonoBehaviour:
     m_lastTime: -8584401423342621889
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 050000000600000007000000
+  ExpandedWaapiItemIds: 010000000500000006000000070000002700000028000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
