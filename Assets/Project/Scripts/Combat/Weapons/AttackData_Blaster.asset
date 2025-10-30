@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131435e1b1248f34c8f2f9533863da24, type: 3}
+  m_Name: AttackData_Blaster
+  m_EditorClassIdentifier: Assembly-CSharp::AttackData
+  attackName: Blaster
+  attacksPerSecond: 10
+  projectilePrefab: {fileID: 825931546508487793, guid: 660d71b9198f3ff449cba55466c5b3dd, type: 3}
+  projectileSpeed: 18
+  projectileLifetime: 5
+  damage: 1
+  knockbackForce: 10
+  fireSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d189adacd265d464faf65ea8dd4afc1f, type: 2}
+  maxTargetRange: 50

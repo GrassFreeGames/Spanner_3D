@@ -80,8 +80,65 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d3164fe8003b2d4b843c874de71a3d51
     GuidInternal: 
-    m_lastTime: -8584398872454435211
+    m_lastTime: -8584397966549033069
     List:
+    - name: BGM
+      guid: 8d308b093526e74bb3a5eb67672dcf6f
+      id: 412724365
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: BGM
+        ObjectType: 4
+        guid: 8d308b093526e74bb3a5eb67672dcf6f
+      Path: Events\Default Work Unit\BGM
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: BGM_RandomLooping
+      guid: cbd2a8527fb9a644af96a04ed496e3c5
+      id: 3963821017
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: BGM
+        ObjectType: 4
+        guid: 8d308b093526e74bb3a5eb67672dcf6f
+      - ElementName: BGM_RandomLooping
+        ObjectType: 3
+        guid: cbd2a8527fb9a644af96a04ed496e3c5
+      Path: Events\Default Work Unit\BGM\BGM_RandomLooping
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Blaster_Fire
+      guid: aa2437d0ab2eed4ca47f315d7b513288
+      id: 639453935
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      - ElementName: Blaster_Fire
+        ObjectType: 3
+        guid: aa2437d0ab2eed4ca47f315d7b513288
+      Path: Events\Default Work Unit\Weapons\Blaster_Fire
+      maxAttenuation: 0
+      maxDuration: 0.46179137
+      minDuration: 0.3755512
     - name: Player_Jump
       guid: e18fcc585c861a4c81dceb8c7dca5df1
       id: 1305133589
@@ -116,6 +173,129 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3.597052
       minDuration: 3.597052
+    - name: UI
+      guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      id: 1551306167
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      Path: Events\Default Work Unit\UI
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Weapon_Upgrade_Tier_1
+      guid: 166500a8c7e57541ac32d784e047c88d
+      id: 3850320119
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Weapon_Upgrades
+        ObjectType: 4
+        guid: 73709c7c9f17a149b13f7b79ebf1df91
+      - ElementName: Weapon_Upgrade_Tier_1
+        ObjectType: 3
+        guid: 166500a8c7e57541ac32d784e047c88d
+      Path: Events\Default Work Unit\UI\Weapon_Upgrades\Weapon_Upgrade_Tier_1
+      maxAttenuation: 0
+      maxDuration: 2.4893198
+      minDuration: 2.4893198
+    - name: Weapon_Upgrade_Tier_2
+      guid: 4fefa59b6211494da7986f13d70323b2
+      id: 3850320116
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Weapon_Upgrades
+        ObjectType: 4
+        guid: 73709c7c9f17a149b13f7b79ebf1df91
+      - ElementName: Weapon_Upgrade_Tier_2
+        ObjectType: 3
+        guid: 4fefa59b6211494da7986f13d70323b2
+      Path: Events\Default Work Unit\UI\Weapon_Upgrades\Weapon_Upgrade_Tier_2
+      maxAttenuation: 0
+      maxDuration: 2.2729251
+      minDuration: 2.2729251
+    - name: Weapon_Upgrade_Tier_3
+      guid: 1e3832f65a8e55449af9435ca51932ff
+      id: 3850320117
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Weapon_Upgrades
+        ObjectType: 4
+        guid: 73709c7c9f17a149b13f7b79ebf1df91
+      - ElementName: Weapon_Upgrade_Tier_3
+        ObjectType: 3
+        guid: 1e3832f65a8e55449af9435ca51932ff
+      Path: Events\Default Work Unit\UI\Weapon_Upgrades\Weapon_Upgrade_Tier_3
+      maxAttenuation: 0
+      maxDuration: 2.5892744
+      minDuration: 2.5892744
+    - name: Weapon_Upgrades
+      guid: 73709c7c9f17a149b13f7b79ebf1df91
+      id: 2040259679
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Weapon_Upgrades
+        ObjectType: 4
+        guid: 73709c7c9f17a149b13f7b79ebf1df91
+      Path: Events\Default Work Unit\UI\Weapon_Upgrades
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Weapons
+      guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      id: 1467963052
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      Path: Events\Default Work Unit\Weapons
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -173,7 +353,7 @@ MonoBehaviour:
     m_lastTime: -8584401423342621889
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000500000006000000070000002700000028000000
+  ExpandedWaapiItemIds: 010000000500000006000000070000002700000028000000660000006700000068000000b4000000b5000000ba000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
