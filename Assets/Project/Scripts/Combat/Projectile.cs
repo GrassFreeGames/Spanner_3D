@@ -78,9 +78,12 @@ public class Projectile : MonoBehaviour
         {
             _hasHit = true;
             
-            // Apply damage (when health system is implemented)
-            // For now, just log it
-            Debug.Log($"Projectile hit {other.gameObject.name} for {_attackData.damage} damage");
+            // Apply damage
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(_attackData.damage);
+            }
             
             // Apply knockback
             ApplyKnockback(other);
@@ -97,10 +100,6 @@ public class Projectile : MonoBehaviour
         {
             // Calculate knockback direction: from player through enemy (radial pushback)
             Vector3 knockbackDirection = (enemyCollider.transform.position - _playerPosition).normalized;
-            
-            // Flatten Y component for horizontal-only knockback
-            knockbackDirection.y = 0;
-            knockbackDirection.Normalize();
             
             // Apply knockback to enemy
             enemy.ApplyKnockback(knockbackDirection, _attackData.knockbackForce, _attackData.knockbackDuration);
