@@ -14,7 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Default Local Group
   m_GUID: 14cdc198deed85440a3f6abf4f9131fc
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 18bf4a533a9364a4cbed3a01efa12339
+    m_Address: Assets/Wwise/SoundBanks/Windows/Media/200456857.wem
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89b265f4cf4cfd347bfe52b3b5f44b1f
+    m_Address: Assets/Wwise/SoundBanks/Windows/Event/Player_Jump.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c080f6a1d1ea9654b9a920d1e9aa16b6
+    m_Address: Assets/Wwise/SoundBanks/Wwise_IDs.h
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c705780c651585941af839201c5c56a3
+    m_Address: Assets/Wwise/SoundBanks/Event/Player_Jump.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5d05fe8715e6b34c8edbcef9512f717
+    m_Address: Assets/Wwise/SoundBanks/Windows/Init.bnk
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 3f467a4c00c578547a4851e7f26aab04, type: 2}
   m_SchemaSet:
