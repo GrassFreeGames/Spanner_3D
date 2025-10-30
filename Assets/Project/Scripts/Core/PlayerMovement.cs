@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using AK.Wwise;
 
 public class PlayerMovement3D : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class PlayerMovement3D : MonoBehaviour
 
     [Header("Jump")]
     public float jumpForce = 5f;
+
+    [Header("Audio")]
+    public AK.Wwise.Event jumpEvent;
 
     [Header("References")]
     public Transform cameraTransform;
@@ -59,6 +63,9 @@ public class PlayerMovement3D : MonoBehaviour
         if (Keyboard.current != null && Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
         {
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, jumpForce, rb.linearVelocity.z);
+            
+            // Trigger jump sound
+            jumpEvent.Post(gameObject);
         }
     }
 
