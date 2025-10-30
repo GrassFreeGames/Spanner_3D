@@ -1457,8 +1457,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30bcf60f20289d44aa75e50629ff8e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
-  player: {fileID: 1852422100}
-  chaseSpeed: 4
+  target: {fileID: 0}
+  distance: 5
+  minDistance: 2
+  maxDistance: 10
+  height: 2
+  mouseSensitivity: 2
+  minVerticalAngle: -30
+  maxVerticalAngle: 60
+  positionSmoothTime: 0.1
+  rotationSmoothTime: 0.05
+  lookAtOffset: {x: 0, y: 1.5, z: 0}
 --- !u!54 &658572357
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2070,8 +2079,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30bcf60f20289d44aa75e50629ff8e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
-  player: {fileID: 1852422100}
-  chaseSpeed: 4
+  target: {fileID: 0}
+  distance: 5
+  minDistance: 2
+  maxDistance: 10
+  height: 2
+  mouseSensitivity: 2
+  minVerticalAngle: -30
+  maxVerticalAngle: 60
+  positionSmoothTime: 0.1
+  rotationSmoothTime: 0.05
+  lookAtOffset: {x: 0, y: 1.5, z: 0}
 --- !u!54 &834049365
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2374,8 +2392,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30bcf60f20289d44aa75e50629ff8e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
-  player: {fileID: 1852422100}
-  chaseSpeed: 4
+  target: {fileID: 0}
+  distance: 5
+  minDistance: 2
+  maxDistance: 10
+  height: 2
+  mouseSensitivity: 2
+  minVerticalAngle: -30
+  maxVerticalAngle: 60
+  positionSmoothTime: 0.1
+  rotationSmoothTime: 0.05
+  lookAtOffset: {x: 0, y: 1.5, z: 0}
 --- !u!1 &1028134935
 GameObject:
   m_ObjectHideFlags: 0
@@ -2742,8 +2769,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30bcf60f20289d44aa75e50629ff8e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
-  player: {fileID: 1852422100}
-  chaseSpeed: 4
+  target: {fileID: 0}
+  distance: 5
+  minDistance: 2
+  maxDistance: 10
+  height: 2
+  mouseSensitivity: 2
+  minVerticalAngle: -30
+  maxVerticalAngle: 60
+  positionSmoothTime: 0.1
+  rotationSmoothTime: 0.05
+  lookAtOffset: {x: 0, y: 1.5, z: 0}
 --- !u!54 &1215432207
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3618,6 +3654,7 @@ GameObject:
   - component: {fileID: 1852422095}
   - component: {fileID: 1852422102}
   - component: {fileID: 1852422103}
+  - component: {fileID: 1852422104}
   m_Layer: 0
   m_Name: CharacterPlayer
   m_TagString: Untagged
@@ -3640,6 +3677,10 @@ MonoBehaviour:
   moveSpeed: 11
   rotationSpeed: 10
   jumpForce: 10
+  jumpEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ae44a8cf9d12f1847a25709f7fc08ce9, type: 2}
   cameraTransform: {fileID: 0}
 --- !u!54 &1852422096
 Rigidbody:
@@ -3815,6 +3856,66 @@ MonoBehaviour:
   eventIdInternal: 0
   valueGuidInternal: 
   m_callbackDataInternal: {fileID: 0}
+--- !u!114 &1852422104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852422094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c425a15a92e54346be98ad8b97933d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkEvent
+  triggerList: f7e1664c
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7ffa069bef214e54aae02a2062edf581, type: 2}
+  useCallbacks: 0
+  stopSoundOnDestroy: 1
+  Callbacks: []
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+--- !u!1 &1870083247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1870083248}
+  m_Layer: 0
+  m_Name: --- WEAPONS ---
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1870083248
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870083247}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.03001, y: 1.83457, z: -29.9771}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1873868557
 GameObject:
   m_ObjectHideFlags: 0
@@ -4102,8 +4203,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30bcf60f20289d44aa75e50629ff8e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThirdPersonCamera
-  player: {fileID: 1852422100}
-  chaseSpeed: 4
+  target: {fileID: 0}
+  distance: 5
+  minDistance: 2
+  maxDistance: 10
+  height: 2
+  mouseSensitivity: 2
+  minVerticalAngle: -30
+  maxVerticalAngle: 60
+  positionSmoothTime: 0.1
+  rotationSmoothTime: 0.05
+  lookAtOffset: {x: 0, y: 1.5, z: 0}
 --- !u!54 &1993844792
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4458,3 +4568,4 @@ SceneRoots:
   - {fileID: 1333678125}
   - {fileID: 1373088042}
   - {fileID: 979042330}
+  - {fileID: 1870083248}

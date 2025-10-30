@@ -13,8 +13,13 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BGM_RANDOMLOOPING = 3963821017U;
+        static const AkUniqueID BLASTER_FIRE = 639453935U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
         static const AkUniqueID PLAYER_SPAWN_IN = 2311955112U;
+        static const AkUniqueID WEAPON_UPGRADE_TIER_1 = 3850320119U;
+        static const AkUniqueID WEAPON_UPGRADE_TIER_2 = 3850320116U;
+        static const AkUniqueID WEAPON_UPGRADE_TIER_3 = 3850320117U;
     } // namespace EVENTS
 
     namespace BUSSES
