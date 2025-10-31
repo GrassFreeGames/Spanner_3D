@@ -15,6 +15,15 @@ public class SpawnManager : MonoBehaviour
     [Tooltip("Distance from player where enemies spawn")]
     public float spawnRadius = 15f;
     
+    [Tooltip("Fixed ground level Y position (fallback if raycast fails)")]
+    public float groundLevel = 0f;
+    
+    [Tooltip("Layer mask for ground detection (select Ground layer)")]
+    public LayerMask groundLayerMask = 1; // Default layer
+    
+    [Tooltip("Height to start raycast from")]
+    public float raycastStartHeight = 100f;
+    
     [Header("Initial Wave Settings (at 10:00)")]
     [Tooltip("Number of enemies in first spawn wave")]
     public int initialEnemyCount = 2;
@@ -176,10 +185,38 @@ public class SpawnManager : MonoBehaviour
             Mathf.Sin(angle) * spawnRadius
         );
         
-        // Position relative to player (at time of spawn)
-        Vector3 spawnPosition = playerTransform.position + offset;
+        // XZ position relative to player
+        Vector3 spawnXZ = new Vector3(
+            playerTransform.position.x + offset.x,
+            0f,
+            playerTransform.position.z + offset.z
+        );
         
-        return spawnPosition;
+        // Detect ground at this XZ position
+        Vector3 groundPosition = GetGroundPosition(spawnXZ);
+        
+        return groundPosition;
+    }
+    
+    Vector3 GetGroundPosition(Vector3 spawnXZ)
+    {
+        // Cast ray downward from above to find ground
+        Vector3 rayStart = new Vector3(spawnXZ.x, raycastStartHeight, spawnXZ.z);
+        RaycastHit hit;
+        
+        if (Physics.Raycast(rayStart, Vector3.down, out hit, raycastStartHeight * 2f, groundLayerMask))
+        {
+            if (showDebugInfo)
+                Debug.Log($"Ground detected at Y={hit.point.y} for spawn position");
+            
+            return hit.point;
+        }
+        
+        // Fallback to fixed ground level if raycast fails
+        if (showDebugInfo)
+            Debug.LogWarning($"Raycast failed at {spawnXZ}, using fallback ground level {groundLevel}");
+        
+        return new Vector3(spawnXZ.x, groundLevel, spawnXZ.z);
     }
     
     void ScheduleNextSpawn()
