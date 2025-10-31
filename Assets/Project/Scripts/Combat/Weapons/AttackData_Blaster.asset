@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: AttackData_Blaster
   m_EditorClassIdentifier: Assembly-CSharp::AttackData
   attackName: Blaster
-  attacksPerSecond: 5
+  attacksPerSecond: 3
   projectilePrefab: {fileID: 825931546508487793, guid: 660d71b9198f3ff449cba55466c5b3dd, type: 3}
   projectileSpeed: 18
   projectileLifetime: 5
-  damage: 1
+  damage: 5
   knockbackForce: 10
   knockbackDuration: 0.5
   fireSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: d189adacd265d464faf65ea8dd4afc1f, type: 2}
-  maxTargetRange: 25
+  maxTargetRange: 15

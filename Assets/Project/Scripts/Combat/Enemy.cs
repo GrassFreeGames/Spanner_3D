@@ -81,7 +81,8 @@ public class Enemy : MonoBehaviour
         }
         
         // Position below ground
-        transform.position = groundPosition - Vector3.up * enemyData.spawnDepth;
+        float adjustedSpawnDepth = enemyData.spawnDepth * enemyData.sizeMultiplier;
+        transform.position = groundPosition - Vector3.up * adjustedSpawnDepth;
         
         // Play spawn sound
         if (enemyData.spawnSound != null)
@@ -101,22 +102,32 @@ public class Enemy : MonoBehaviour
         // Phase 1: Rise from ground
         _currentState = EnemyState.Spawning;
         
-        while (transform.position.y < _targetGroundPosition.y)
+        while (transform.position.y < _targetGroundPosition.y - 0.01f)
         {
-            transform.position += Vector3.up * enemyData.riseSpeed * Time.deltaTime;
+            // Move up, scaled by size for consistent timing
+            float riseAmount = enemyData.riseSpeed * enemyData.sizeMultiplier * Time.deltaTime;
+            transform.position += Vector3.up * riseAmount;
             
-            // Clamp to not overshoot
-            if (transform.position.y > _targetGroundPosition.y)
+            // Clamp to target if we'd overshoot
+            if (transform.position.y >= _targetGroundPosition.y)
             {
                 transform.position = new Vector3(
                     transform.position.x,
                     _targetGroundPosition.y,
                     transform.position.z
                 );
+                break;
             }
             
             yield return null;
         }
+        
+        // Ensure we're exactly at ground level
+        transform.position = new Vector3(
+            transform.position.x,
+            _targetGroundPosition.y,
+            transform.position.z
+        );
         
         // Phase 2: Pause at ground level
         _currentState = EnemyState.Paused;
@@ -179,9 +190,16 @@ public class Enemy : MonoBehaviour
         if (showDebugInfo)
             Debug.Log($"{enemyData.enemyName} died!");
         
+        // Drop XP token at death location
+        if (enemyData.xpTokenPrefab != null)
+        {
+            Vector3 dropPosition = transform.position;
+            Instantiate(enemyData.xpTokenPrefab, dropPosition, Quaternion.identity);
+        }
+        
         // TODO: Death animation, VFX, drop loot, etc.
         
-        // For now, just destroy
+        // Destroy enemy
         Destroy(gameObject);
     }
 }
