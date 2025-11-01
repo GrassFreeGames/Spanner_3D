@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5551505735157708156}
   - component: {fileID: 5562829500268754705}
   - component: {fileID: 6543472248486832939}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Unit_Enemy_Box
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -169,4 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   enemyData: {fileID: 11400000, guid: 8fcf28af837f09249bd374aa7b24bd25, type: 2}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
   showDebugInfo: 0
