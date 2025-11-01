@@ -9,6 +9,10 @@ public class Enemy : MonoBehaviour
     [Header("Configuration")]
     public EnemyData enemyData;
     
+    [Header("Ground Detection")]
+    [Tooltip("Layer mask for ground detection (assign Ground/Terrain layer)")]
+    public LayerMask groundLayerMask = 1; // Default layer
+    
     [Header("Debug")]
     public bool showDebugInfo = false;
     
@@ -190,16 +194,55 @@ public class Enemy : MonoBehaviour
         if (showDebugInfo)
             Debug.Log($"{enemyData.enemyName} died!");
         
-        // Drop XP token at death location
+        // Get ground position below enemy with hover offset
+        Vector3 dropPosition = GetGroundPositionBelow(transform.position);
+        
+        // Drop XP token at ground level (with hover offset)
         if (enemyData.xpTokenPrefab != null)
         {
-            Vector3 dropPosition = transform.position;
             Instantiate(enemyData.xpTokenPrefab, dropPosition, Quaternion.identity);
         }
         
-        // TODO: Death animation, VFX, drop loot, etc.
+        // 1% chance to drop PowerToken_Magnet
+        if (enemyData.powerTokenPrefab != null && Random.Range(0f, 1f) <= enemyData.powerTokenDropChance)
+        {
+            // Offset slightly so tokens don't overlap
+            Vector3 powerTokenPosition = dropPosition + new Vector3(0.5f, 0f, 0f);
+            Instantiate(enemyData.powerTokenPrefab, powerTokenPosition, Quaternion.identity);
+            
+            if (showDebugInfo)
+                Debug.Log($"{enemyData.enemyName} dropped a PowerToken!");
+        }
+        
+        // TODO: Death animation, VFX, etc.
         
         // Destroy enemy
         Destroy(gameObject);
+    }
+    
+    /// <summary>
+    /// Raycast down from position to find ground level, with hover offset.
+    /// Only detects ground layer, ignores enemies and items.
+    /// </summary>
+    Vector3 GetGroundPositionBelow(Vector3 position)
+    {
+        RaycastHit hit;
+        Vector3 rayStart = position;
+        float hoverHeight = enemyData != null ? enemyData.tokenHoverHeight : 0.3f;
+        
+        // Cast downward to find ground (ONLY check ground layer, ignore enemies/items)
+        if (Physics.Raycast(rayStart, Vector3.down, out hit, 200f, groundLayerMask))
+        {
+            if (showDebugInfo)
+                Debug.Log($"Ground found at Y={hit.point.y}, spawning token at Y={hit.point.y + hoverHeight}");
+            
+            return hit.point + Vector3.up * hoverHeight;
+        }
+        
+        // Fallback: use Y=0 with hover height
+        if (showDebugInfo)
+            Debug.LogWarning($"No ground found below {position}, using fallback Y=0. Check groundLayerMask!");
+        
+        return new Vector3(position.x, hoverHeight, position.z);
     }
 }

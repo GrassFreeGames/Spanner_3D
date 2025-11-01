@@ -1,28 +1,25 @@
 using UnityEngine;
 
 /// <summary>
-/// XP token that enemies drop. Gets pulled toward player when in range.
-/// Attach to flat 2D token prefab. NO COLLIDER NEEDED.
+/// Base class for all PowerToken pickups (Magnet, Shield, Bombs, etc.)
+/// Attach to power token prefabs. NO COLLIDER NEEDED.
 /// </summary>
-public class XP_Token : MonoBehaviour
+public abstract class PowerToken : MonoBehaviour
 {
     [Header("Token Properties")]
-    [Tooltip("XP value this token grants")]
-    public int expValue = 1;
-    
-    [Header("Movement")]
     [Tooltip("Speed token moves toward player")]
     public float moveSpeed = 8f;
     
     [Tooltip("Distance to player before token is collected")]
     public float collectDistance = 0.5f;
     
+    [Header("Visual")]
+    [Tooltip("Rotation speed for visual effect")]
+    public float rotationSpeed = 90f;
+    
     // Private fields: _camelCase
     private Transform _playerTransform;
     private bool _isBeingPulled = false;
-    
-    // Properties: PascalCase
-    public bool IsBeingPulled => _isBeingPulled;
     
     void Start()
     {
@@ -34,13 +31,16 @@ public class XP_Token : MonoBehaviour
         }
         else
         {
-            Debug.LogError("XP_Token cannot find player! Tag your player with 'Player' tag.", this);
+            Debug.LogError("PowerToken cannot find player! Tag your player with 'Player' tag.", this);
         }
     }
     
     void Update()
     {
         if (_playerTransform == null) return;
+        
+        // Rotate for visual effect
+        transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
         
         float distanceToPlayer = Vector3.Distance(transform.position, _playerTransform.position);
         
@@ -69,24 +69,17 @@ public class XP_Token : MonoBehaviour
         }
     }
     
-    /// <summary>
-    /// Force this token to be pulled toward player (used by Magnet power)
-    /// </summary>
-    public void ForcePull()
-    {
-        _isBeingPulled = true;
-    }
-    
     void CollectToken()
     {
-        // Grant XP to player
-        ExperienceManager expManager = ExperienceManager.Instance;
-        if (expManager != null)
-        {
-            expManager.AddExperience(expValue);
-        }
+        // Trigger power effect
+        OnCollected(_playerTransform.gameObject);
         
         // Destroy token
         Destroy(gameObject);
     }
+    
+    /// <summary>
+    /// Override this method to define what happens when token is collected
+    /// </summary>
+    protected abstract void OnCollected(GameObject player);
 }

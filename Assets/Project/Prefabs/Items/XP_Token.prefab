@@ -11,10 +11,8 @@ GameObject:
   - component: {fileID: 7272761786208226242}
   - component: {fileID: 8489550429723964944}
   - component: {fileID: 8529505860101625201}
-  - component: {fileID: 455957773294142273}
   - component: {fileID: 6069190278007200845}
-  - component: {fileID: -1875249684333678683}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: XP_Token
   m_TagString: XP
   m_Icon: {fileID: 0}
@@ -92,28 +90,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &455957773294142273
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4063370367286278256}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &6069190278007200845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,24 +105,3 @@ MonoBehaviour:
   expValue: 1
   moveSpeed: 16
   collectDistance: 0.5
---- !u!65 &-1875249684333678683
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4063370367286278256}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.99999994, y: 1, z: 6.1232336e-17}
-  m_Center: {x: 0, y: 0, z: 0}

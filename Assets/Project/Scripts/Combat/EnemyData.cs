@@ -40,6 +40,16 @@ public class EnemyData : ScriptableObject
     [Tooltip("XP token prefab to drop when killed")]
     public GameObject xpTokenPrefab;
     
+    [Tooltip("PowerToken prefab to drop (e.g., Magnet)")]
+    public GameObject powerTokenPrefab;
+    
+    [Tooltip("Chance to drop PowerToken (0.01 = 1%)")]
+    [Range(0f, 1f)]
+    public float powerTokenDropChance = 0.01f;
+    
+    [Tooltip("How high tokens hover above ground")]
+    public float tokenHoverHeight = 0.3f;
+    
     [Tooltip("Experience/score value when killed")]
     public int scoreValue = 10;
 }
