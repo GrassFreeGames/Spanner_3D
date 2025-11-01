@@ -221,6 +221,29 @@ public class Enemy : MonoBehaviour
     }
     
     /// <summary>
+    /// Detect collision with player and deal damage
+    /// </summary>
+    void OnCollisionStay(Collision collision)
+    {
+        // Only deal damage when active (not during spawn)
+        if (_currentState != EnemyState.Active) return;
+        
+        // Check if hit player
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerStats playerStats = collision.gameObject.GetComponent<PlayerStats>();
+            if (playerStats != null)
+            {
+                // Try to deal damage (respects per-enemy cooldown)
+                bool damageDealt = playerStats.TakeDamage(enemyData.damage, gameObject);
+                
+                if (showDebugInfo && damageDealt)
+                    Debug.Log($"{enemyData.enemyName} hit player for {enemyData.damage} damage!");
+            }
+        }
+    }
+    
+    /// <summary>
     /// Raycast down from position to find ground level, with hover offset.
     /// Only detects ground layer, ignores enemies and items.
     /// </summary>

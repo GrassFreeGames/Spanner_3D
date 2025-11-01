@@ -19,6 +19,7 @@ public class XP_Token : MonoBehaviour
     
     // Private fields: _camelCase
     private Transform _playerTransform;
+    private Transform _cameraTransform;
     private bool _isBeingPulled = false;
     
     // Properties: PascalCase
@@ -36,11 +37,29 @@ public class XP_Token : MonoBehaviour
         {
             Debug.LogError("XP_Token cannot find player! Tag your player with 'Player' tag.", this);
         }
+        
+        // Find camera for billboard effect
+        _cameraTransform = Camera.main?.transform;
+        if (_cameraTransform == null)
+        {
+            Debug.LogError("XP_Token cannot find main camera!", this);
+        }
     }
     
     void Update()
     {
         if (_playerTransform == null) return;
+        
+        // Billboard: Always face camera (not player) for third-person view
+        if (_cameraTransform != null)
+        {
+            Vector3 directionToCamera = _cameraTransform.position - transform.position;
+            directionToCamera.y = 0; // Keep token flat, only rotate horizontally
+            if (directionToCamera != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(directionToCamera);
+            }
+        }
         
         float distanceToPlayer = Vector3.Distance(transform.position, _playerTransform.position);
         
