@@ -26,4 +26,7 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 0}
   xpTokenPrefab: {fileID: 4063370367286278256, guid: 4401d2ecab2b50248a2d6b8283cb5ff1, type: 3}
+  powerTokenPrefab: {fileID: 4063370367286278256, guid: 8686f4a983c3fb149b3045f21dc14482, type: 3}
+  powerTokenDropChance: 0.04
+  tokenHoverHeight: 0.3
   scoreValue: 10
