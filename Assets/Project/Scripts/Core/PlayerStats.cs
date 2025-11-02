@@ -5,6 +5,7 @@ using System.Collections.Generic;
 /// Holds player stats like pickup radius, health, etc.
 /// Attach to player GameObject.
 /// </summary>
+[RequireComponent(typeof(Rigidbody))]
 public class PlayerStats : MonoBehaviour
 {
     [Header("Pickup")]
@@ -18,6 +19,13 @@ public class PlayerStats : MonoBehaviour
     [Tooltip("Invulnerability time after taking damage (in seconds)")]
     public float invulnerabilityDuration = 0f; // 0 = no i-frames
     
+    [Header("Enemy Kick")]
+    [Tooltip("Force applied when taking damage from enemies")]
+    public float enemyKickForce = 5f;
+    
+    [Tooltip("How long enemy kick lasts (brief stun)")]
+    public float enemyKickDuration = 0.1f;
+    
     [Header("Debug")]
     public bool showDebugInfo = false;
     
@@ -25,6 +33,8 @@ public class PlayerStats : MonoBehaviour
     private float _currentHealth;
     private bool _isAlive = true;
     private float _lastDamageTime = -999f;
+    private Rigidbody _rb;
+    private float _enemyKickEndTime = 0f;
     
     // Track last damage time per enemy to prevent spam damage
     private Dictionary<GameObject, float> _enemyDamageCooldowns = new Dictionary<GameObject, float>();
@@ -36,6 +46,7 @@ public class PlayerStats : MonoBehaviour
     public float HealthPercent => _currentHealth / maxHealth;
     public bool IsAlive => _isAlive;
     public bool IsInvulnerable => Time.time < _lastDamageTime + invulnerabilityDuration;
+    public bool IsInEnemyKick => Time.time < _enemyKickEndTime;
     
     // Singleton pattern for easy access
     private static PlayerStats _instance;
@@ -44,6 +55,7 @@ public class PlayerStats : MonoBehaviour
     void Awake()
     {
         _currentHealth = maxHealth;
+        _rb = GetComponent<Rigidbody>();
         
         // Singleton setup
         if (_instance != null && _instance != this)
@@ -74,8 +86,9 @@ public class PlayerStats : MonoBehaviour
     
     /// <summary>
     /// Take damage from an enemy. Returns true if damage was applied.
+    /// sourcePosition is used to calculate knockback direction.
     /// </summary>
-    public bool TakeDamage(float damage, GameObject source = null)
+    public bool TakeDamage(float damage, GameObject source = null, Vector3? sourcePosition = null)
     {
         if (!_isAlive) return false;
         if (IsInvulnerable) return false;
@@ -103,6 +116,12 @@ public class PlayerStats : MonoBehaviour
         if (showDebugInfo)
             Debug.Log($"Player took {damage} damage. Health: {_currentHealth}/{maxHealth}");
         
+        // Apply enemy kick
+        if (sourcePosition.HasValue && _rb != null)
+        {
+            ApplyEnemyKick(sourcePosition.Value);
+        }
+        
         // Check for death
         if (_currentHealth <= 0)
         {
@@ -110,6 +129,29 @@ public class PlayerStats : MonoBehaviour
         }
         
         return true;
+    }
+    
+    /// <summary>
+    /// Apply enemy kick force away from damage source
+    /// </summary>
+    void ApplyEnemyKick(Vector3 sourcePosition)
+    {
+        // Calculate direction away from source
+        Vector3 kickDirection = (transform.position - sourcePosition).normalized;
+        
+        // Keep kick mostly horizontal (reduce Y component)
+        kickDirection.y = Mathf.Min(kickDirection.y, 0.2f);
+        kickDirection.Normalize();
+        
+        // Clear current velocity and apply kick impulse
+        _rb.linearVelocity = Vector3.zero;
+        _rb.AddForce(kickDirection * enemyKickForce, ForceMode.Impulse);
+        
+        // Set enemy kick end time
+        _enemyKickEndTime = Time.time + enemyKickDuration;
+        
+        if (showDebugInfo)
+            Debug.Log($"Player kicked back with force {enemyKickForce}!");
     }
     
     /// <summary>

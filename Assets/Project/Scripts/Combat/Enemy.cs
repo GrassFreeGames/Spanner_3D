@@ -235,7 +235,8 @@ public class Enemy : MonoBehaviour
             if (playerStats != null)
             {
                 // Try to deal damage (respects per-enemy cooldown)
-                bool damageDealt = playerStats.TakeDamage(enemyData.damage, gameObject);
+                // Pass enemy position for knockback calculation
+                bool damageDealt = playerStats.TakeDamage(enemyData.damage, gameObject, transform.position);
                 
                 if (showDebugInfo && damageDealt)
                     Debug.Log($"{enemyData.enemyName} hit player for {enemyData.damage} damage!");
