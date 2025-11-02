@@ -22,10 +22,12 @@ public class AttackController : MonoBehaviour
     private float _attackTimer = 0f;
     private Transform _cachedTransform;
     private int _currentTargetIndex = 0;
+    private CombatStats _combatStats;
 
     void Start()
     {
         _cachedTransform = transform;
+        _combatStats = CombatStats.Instance;
         
         // Validate setup
         if (currentAttack == null)
@@ -42,7 +44,7 @@ public class AttackController : MonoBehaviour
             return;
         }
         
-        // Start with attack ready
+        // Start with attack ready (use base interval)
         _attackTimer = currentAttack.AttackInterval;
     }
 
@@ -53,12 +55,31 @@ public class AttackController : MonoBehaviour
         // Count down to next attack
         _attackTimer += Time.deltaTime;
         
+        // Calculate attack interval with upgrades
+        float attackInterval = GetCurrentAttackInterval();
+        
         // Check if ready to attack
-        if (_attackTimer >= currentAttack.AttackInterval)
+        if (_attackTimer >= attackInterval)
         {
             TriggerAttack();
             _attackTimer = 0f;
         }
+    }
+    
+    /// <summary>
+    /// Get current attack interval with player upgrades applied
+    /// </summary>
+    float GetCurrentAttackInterval()
+    {
+        if (_combatStats != null)
+        {
+            // Use modified attack rate
+            float attackRate = _combatStats.GetFinalAttackRate();
+            return 1f / attackRate;
+        }
+        
+        // Fallback to base interval
+        return currentAttack.AttackInterval;
     }
 
     void TriggerAttack()
@@ -171,6 +192,12 @@ public class AttackController : MonoBehaviour
         // 4.0 to 4.99 -> 7 enemies
         
         float attacksPerSecond = currentAttack.attacksPerSecond;
+        
+        // Apply upgrades if available
+        if (_combatStats != null)
+        {
+            attacksPerSecond = _combatStats.GetFinalAttackRate();
+        }
         
         if (attacksPerSecond <= 2.0f)
             return 4;
