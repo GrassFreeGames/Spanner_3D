@@ -109,6 +109,13 @@ public class PlayerStats : MonoBehaviour
             _enemyDamageCooldowns[source] = Time.time;
         }
         
+        // Apply armor damage reduction
+        UpgradeManager upgradeManager = UpgradeManager.Instance;
+        if (upgradeManager != null)
+        {
+            damage = upgradeManager.ApplyArmor(damage);
+        }
+        
         // Apply damage
         _currentHealth -= damage;
         _lastDamageTime = Time.time;

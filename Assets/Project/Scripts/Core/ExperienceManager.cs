@@ -98,7 +98,17 @@ public class ExperienceManager : MonoBehaviour
     /// </summary>
     void OnLevelUp()
     {
-        // Play sound, show UI, trigger upgrade selection, etc.
+        // Show upgrade selection UI
+        UpgradeUI upgradeUI = UpgradeUI.Instance;
+        if (upgradeUI != null)
+        {
+            upgradeUI.ShowUpgradeScreen();
+        }
+        else
+        {
+            Debug.LogWarning("No UpgradeUI found! Player leveled up but can't select upgrade.");
+        }
+        
         Debug.Log($"🎉 Level {_currentLevel} reached!");
     }
     

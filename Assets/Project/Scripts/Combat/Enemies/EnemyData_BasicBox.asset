@@ -16,7 +16,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 1249839511936253592, guid: 25d35cdd9a00f9b469a2f5ca396c1f21, type: 3}
   maxHealth: 10
   moveSpeed: 5
-  damage: 1
+  damage: 5
   spawnDepth: 1.5
   sizeMultiplier: 1.1
   riseSpeed: 4
