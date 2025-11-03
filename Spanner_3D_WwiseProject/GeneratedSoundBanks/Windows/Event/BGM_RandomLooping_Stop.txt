@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2370740652	BGM_RandomLooping_Stop			\Default Work Unit\BGM\BGM_RandomLooping_Stop	
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{1D7152A5-067B-45D1-9952-92E2DE031C9D}" SchemaVersion="123">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{1D7152A5-067B-45D1-9952-92E2DE031C9D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="SFX" ID="{8499217F-3093-4880-8958-2838F4AC2494}" ShortID="557635141">
+					<ChildrenList>
+						<WorkUnit Name="Combat" ID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}" PersistMode="Reference"/>
+						<WorkUnit Name="UI" ID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}" PersistMode="Reference"/>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="BGM" ID="{E48CC45A-580F-4488-A7BE-C153429E2F44}" ShortID="985632619">
+					<ChildrenList>
+						<WorkUnit Name="BGM" ID="{B68D79AD-E975-4206-96C0-5053D4DC3718}" PersistMode="Reference"/>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

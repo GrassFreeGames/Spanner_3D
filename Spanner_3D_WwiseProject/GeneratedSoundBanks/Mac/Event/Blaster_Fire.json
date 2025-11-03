@@ -1,0 +1,72 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "639453935",
+    "Type": "Event",
+    "GUID": "{D03724AA-2EAB-4CED-A47F-315D7B513288}",
+    "Language": "SFX",
+    "Hash": "{20D7B85A-D793-0C96-3947-B5EE41BD13B4}",
+    "ObjectPath": "Blaster_Fire",
+    "ShortName": "Blaster_Fire",
+    "Path": "Event/Blaster_Fire.bnk",
+    "Media": [
+     {
+      "Id": "175578884",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Blaster_Fire_2.wav",
+      "Path": "Media/175578884.wem",
+      "CachePath": "59/{59206E6D-CBDE-6F34-9E5E-27C45399E171}.wem"
+     },
+     {
+      "Id": "618991515",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Blaster_Fire_1.wav",
+      "Path": "Media/618991515.wem",
+      "CachePath": "1F/{1F9B52F4-E5FB-4C2C-9FC0-ADA102B41FDA}.wem"
+     },
+     {
+      "Id": "805351909",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Blaster_Fire_3.wav",
+      "Path": "Media/805351909.wem",
+      "CachePath": "59/{597727D1-FE6A-918A-94FF-18B62F37B33B}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "639453935",
+      "Name": "Blaster_Fire",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\Blaster_Fire",
+      "GUID": "{D03724AA-2EAB-4CED-A47F-315D7B513288}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.3755512",
+      "DurationMax": "0.46179137",
+      "MediaRefs": [
+       {
+        "Id": "175578884"
+       },
+       {
+        "Id": "618991515"
+       },
+       {
+        "Id": "805351909"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{100A0300-AB64-17A0-2170-DF868A218F56}"
+ }
+}
