@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3850320117",
+    "Type": "Event",
+    "GUID": "{F632381E-8E5A-4455-9AF9-435CA51932FF}",
+    "Language": "SFX",
+    "Hash": "{DE62FD44-05CE-F22F-CD0B-1C34A990CD30}",
+    "ObjectPath": "Weapon_Upgrade_Tier_3",
+    "ShortName": "Weapon_Upgrade_Tier_3",
+    "Path": "Event/Weapon_Upgrade_Tier_3.bnk",
+    "Media": [
+     {
+      "Id": "211122122",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon_Upgrade_Tier3.wav",
+      "Path": "Media/211122122.wem",
+      "CachePath": "6D/{6DD0F70A-8C4D-D059-9C62-DB8C77731D39}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3850320117",
+      "Name": "Weapon_Upgrade_Tier_3",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Weapon_Upgrades\\Weapon_Upgrade_Tier_3",
+      "GUID": "{F632381E-8E5A-4455-9AF9-435CA51932FF}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.5892744",
+      "DurationMax": "2.5892744",
+      "MediaRefs": [
+       {
+        "Id": "211122122"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6FA3C37E-B50A-7D32-D045-875849CA87D1}"
+ }
+}

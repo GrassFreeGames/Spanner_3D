@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3083087645",
+    "Type": "Event",
+    "GUID": "{5FA897C8-800F-4A00-B2FF-18BE3B2AE992}",
+    "Language": "SFX",
+    "Hash": "{B26D5233-E1D6-47B0-860E-AF929FFC89EF}",
+    "ObjectPath": "Player_Death",
+    "ShortName": "Player_Death",
+    "Path": "Event/Player_Death.bnk",
+    "Media": [
+     {
+      "Id": "958503205",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Death.wav",
+      "Path": "Media/958503205.wem",
+      "CachePath": "6C/{6CCA4675-667C-50F4-C700-B40455E2EA53}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3083087645",
+      "Name": "Player_Death",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player _Actions\\Player_Death",
+      "GUID": "{5FA897C8-800F-4A00-B2FF-18BE3B2AE992}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.064898",
+      "DurationMax": "4.064898",
+      "MediaRefs": [
+       {
+        "Id": "958503205"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{7585E1E2-F08F-2B24-DBD9-DF5937443FBC}"
+ }
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E84F16D3-3B00-4B2D-843C-874DE71A3D51}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{E84F16D3-3B00-4B2D-843C-874DE71A3D51}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="BGM" ID="{098B308D-2635-4BE7-B3A5-EB67672DCF6F}" ShortID="415826620">
+					<ChildrenList>
+						<Event Name="BGM_RandomLooping" ID="{52A8D2CB-B97F-44A6-AF96-A04ED496E3C5}">
+							<ChildrenList>
+								<Action Name="" ID="{BC058740-D0AB-4482-BDC1-142CE0EF015F}" ShortID="1058919054">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BGM_Playlist" ID="{DE14A585-3251-4EE5-A8BB-71B6D686CF11}" WorkUnitID="{B68D79AD-E975-4206-96C0-5053D4DC3718}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="BGM_RandomLooping_Stop" ID="{315BC5B0-9297-4882-94D5-3029458B7857}">
+							<ChildrenList>
+								<Action Name="" ID="{053D566E-EC9F-4B82-8B7F-2E1AED9309A2}" ShortID="490641906">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="3"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="UI" ID="{CDBFE742-28A3-4563-A7C9-A3B8EA6BA7E7}" ShortID="695352965">
+					<ChildrenList>
+						<Folder Name="Weapon_Upgrades" ID="{7C9C7073-179F-49A1-B13F-7B79EBF1DF91}" ShortID="602655880">
+							<ChildrenList>
+								<Event Name="Weapon_Upgrade_Tier_1" ID="{A8006516-E5C7-4175-AC32-D784E047C88D}">
+									<ChildrenList>
+										<Action Name="" ID="{CCC74D08-0396-4AAF-9D63-686263B17348}" ShortID="66434636">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Weapon_Upgrade_tier1" ID="{8E7BB7D0-55AA-4F1D-BA57-BF628E851105}" WorkUnitID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Weapon_Upgrade_Tier_2" ID="{9BA5EF4F-1162-4D49-A798-6F13D70323B2}">
+									<ChildrenList>
+										<Action Name="" ID="{E6041E0F-52CD-497B-9069-01FF37A94DB2}" ShortID="431984957">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Weapon_Upgrade_tier2" ID="{493D647D-2D43-4E38-8C36-C48E58C10B82}" WorkUnitID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Weapon_Upgrade_Tier_3" ID="{F632381E-8E5A-4455-9AF9-435CA51932FF}">
+									<ChildrenList>
+										<Action Name="" ID="{BCF23C9D-6F80-45D7-BE32-0F0CD0700437}" ShortID="779619025">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Weapon_Upgrade_tier3" ID="{E3E08C6B-40D7-43FF-9172-A513E1C6F72D}" WorkUnitID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+							</ChildrenList>
+						</Folder>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Weapons" ID="{BAC171B7-7D40-432A-AEEC-C61F5B85B8E4}" ShortID="625354996">
+					<ChildrenList>
+						<Event Name="Blaster_Fire" ID="{D03724AA-2EAB-4CED-A47F-315D7B513288}">
+							<ChildrenList>
+								<Action Name="" ID="{F6228C02-176A-4ACB-9706-58211E5C758D}" ShortID="180203234">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Blaster_Fire" ID="{37460A95-524F-44AD-A5D9-DB8B427A4599}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="BlasterV3_Fire" ID="{62499AA1-7E67-45F8-998D-F745D2491A0F}">
+							<ChildrenList>
+								<Action Name="" ID="{42350452-719F-4840-BFDA-F45A06EE41AA}" ShortID="585019386">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BlasterV2_Fire" ID="{C53C9312-25CF-40A4-9E96-5FE5C494D3C6}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Player _Actions" ID="{F5BDEE43-F389-49EC-B43D-45B931C3BCBA}" ShortID="852125998">
+					<ChildrenList>
+						<Event Name="Player_Jump" ID="{58CC8FE1-865C-4C1A-81DC-EB8C7DCA5DF1}">
+							<ChildrenList>
+								<Action Name="" ID="{DA83A0F3-3764-412E-8CE2-E5BC40084BF6}" ShortID="457026980">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Jump" ID="{9113B036-ABEB-4E92-A093-05620B52872B}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Spawn_In" ID="{C77B9FC6-5CA7-4428-89A8-D52054D87B88}">
+							<ChildrenList>
+								<Action Name="" ID="{B5ADE328-FB12-431B-A584-39DFC63702CC}" ShortID="112349329">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Spawn_In" ID="{0A17ACC6-4EBF-4975-9AE0-714360D207A7}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Player_Death" ID="{5FA897C8-800F-4A00-B2FF-18BE3B2AE992}">
+							<ChildrenList>
+								<Action Name="" ID="{32B7827E-1295-484D-A7AF-453BC73C05B3}" ShortID="162705561">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Player_Death" ID="{EB5D0A04-1E56-4C36-9938-D81BE5E527FE}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

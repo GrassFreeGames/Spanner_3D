@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}" SchemaVersion="123" RootDocumentID="{1D7152A5-067B-45D1-9952-92E2DE031C9D}" ParentDocumentID="{1D7152A5-067B-45D1-9952-92E2DE031C9D}">
+	<AudioObjects>
+		<WorkUnit Name="UI" ID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}" OwnerID="{8499217F-3093-4880-8958-2838F4AC2494}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="UI" ID="{1BDD827F-4A64-4729-8ACA-269D27AE4C3E}" ShortID="127112999">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<ActorMixer Name="Weapon_Upgrades" ID="{07AA1142-D582-43C0-8D6F-E128D2D4959F}" ShortID="730226445">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Weapon_Upgrade_tier3" ID="{E3E08C6B-40D7-43FF-9172-A513E1C6F72D}" ShortID="496450539">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Weapon_Upgrade_Tier3" ID="{1284D24A-B659-4C01-A1F6-3E6CE548B784}" ShortID="756758944">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Weapon_Upgrade_Tier3" ID="{2C32DE9F-39AD-43F6-A59B-96AB267F1917}">
+													<Language>SFX</Language>
+													<AudioFile>Weapon_Upgrade_Tier3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="211122122"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Weapon_Upgrade_Tier3" ID="{2C32DE9F-39AD-43F6-A59B-96AB267F1917}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Weapon_Upgrade_tier2" ID="{493D647D-2D43-4E38-8C36-C48E58C10B82}" ShortID="699107854">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Weapon_Upgrade_Tier2" ID="{B223C1B3-509A-4446-8DC3-743E4C2F0F41}" ShortID="316898206">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Weapon_Upgrade_Tier2" ID="{C62AAFCF-1EBD-4CDA-8D35-5EE99B9F4858}">
+													<Language>SFX</Language>
+													<AudioFile>Weapon_Upgrade_Tier2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="980328772"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Weapon_Upgrade_Tier2" ID="{C62AAFCF-1EBD-4CDA-8D35-5EE99B9F4858}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Weapon_Upgrade_tier1" ID="{8E7BB7D0-55AA-4F1D-BA57-BF628E851105}" ShortID="43938857">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Weapon_Upgrade_Tier1" ID="{39DA18C0-7BE2-4DCD-BF3E-9B7030822A1E}" ShortID="197258601">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Weapon_Upgrade_Tier1" ID="{07D08492-95F5-4D7D-9077-4562544986BF}">
+													<Language>SFX</Language>
+													<AudioFile>Weapon_Upgrade_Tier1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="408435869"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Weapon_Upgrade_Tier1" ID="{07D08492-95F5-4D7D-9077-4562544986BF}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3850320119",
+    "Type": "Event",
+    "GUID": "{A8006516-E5C7-4175-AC32-D784E047C88D}",
+    "Language": "SFX",
+    "Hash": "{968CDF63-0456-F6E7-F39E-FF90E0A37121}",
+    "ObjectPath": "Weapon_Upgrade_Tier_1",
+    "ShortName": "Weapon_Upgrade_Tier_1",
+    "Path": "Event/Weapon_Upgrade_Tier_1.bnk",
+    "Media": [
+     {
+      "Id": "408435869",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Weapon_Upgrade_Tier1.wav",
+      "Path": "Media/408435869.wem",
+      "CachePath": "8F/{8F931375-B5A1-4D1B-F6EC-BAC5C4185D5E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3850320119",
+      "Name": "Weapon_Upgrade_Tier_1",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Weapon_Upgrades\\Weapon_Upgrade_Tier_1",
+      "GUID": "{A8006516-E5C7-4175-AC32-D784E047C88D}",
+      "DurationType": "OneShot",
+      "DurationMin": "2.4893198",
+      "DurationMax": "2.4893198",
+      "MediaRefs": [
+       {
+        "Id": "408435869"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{20B59962-DE69-6193-0637-1B682BEF9343}"
+ }
+}
