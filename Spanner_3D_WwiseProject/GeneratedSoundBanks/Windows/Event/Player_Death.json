@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5FA897C8-800F-4A00-B2FF-18BE3B2AE992}",
     "Language": "SFX",
-    "Hash": "{B26D5233-E1D6-47B0-860E-AF929FFC89EF}",
+    "Hash": "{B13F1F5D-21BC-D733-9DA0-F090DD75D6F8}",
     "ObjectPath": "Player_Death",
     "ShortName": "Player_Death",
     "Path": "Event/Player_Death.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{E88C902C-B8E8-3641-7002-D9960AE25CB2}"
+  "FileHash": "{70470728-C978-3C4E-D74B-0EF5398B7D11}"
  }
 }

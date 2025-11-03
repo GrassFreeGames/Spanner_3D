@@ -1,7 +1,7 @@
 {
  "SoundBanksInfo": {
-  "Platform": "Mac",
-  "BasePlatform": "Mac",
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
   "SchemaVersion": "16",
   "SoundBankVersion": "154",
   "SoundBanks": [
@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5FA897C8-800F-4A00-B2FF-18BE3B2AE992}",
     "Language": "SFX",
-    "Hash": "{B26D5233-E1D6-47B0-860E-AF929FFC89EF}",
+    "Hash": "{B13F1F5D-21BC-D733-9DA0-F090DD75D6F8}",
     "ObjectPath": "Player_Death",
     "ShortName": "Player_Death",
     "Path": "Event/Player_Death.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{7585E1E2-F08F-2B24-DBD9-DF5937443FBC}"
+  "FileHash": "{70470728-C978-3C4E-D74B-0EF5398B7D11}"
  }
 }
