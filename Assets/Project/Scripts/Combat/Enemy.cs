@@ -194,6 +194,13 @@ public class Enemy : MonoBehaviour
         if (showDebugInfo)
             Debug.Log($"{enemyData.enemyName} died!");
         
+        // Register kill with stats tracker
+        GameStatsTracker statsTracker = GameStatsTracker.Instance;
+        if (statsTracker != null)
+        {
+            statsTracker.RegisterKill();
+        }
+        
         // Get ground position below enemy with hover offset
         Vector3 dropPosition = GetGroundPositionBelow(transform.position);
         
