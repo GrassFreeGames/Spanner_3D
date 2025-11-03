@@ -186,21 +186,23 @@ public class PlayerStats : MonoBehaviour
         
         Debug.Log("💀 Player died!");
         
-        // TODO: Trigger game over screen, death animation, etc.
-        OnPlayerDeath();
-    }
-    
-    /// <summary>
-    /// Called when player dies. Hook for game over logic.
-    /// </summary>
-    void OnPlayerDeath()
-    {
-        // Pause game, show game over UI, etc.
-        // For now, just log
-        Debug.Log("Game Over! Implement game over screen here.");
+        // Register death with stats tracker
+        GameStatsTracker statsTracker = GameStatsTracker.Instance;
+        if (statsTracker != null)
+        {
+            statsTracker.RegisterDeath();
+        }
         
-        // Optional: Restart level after delay
-        // Invoke("RestartLevel", 3f);
+        // Trigger death sequence (camera zoom, desaturation, UI)
+        DeathController deathController = DeathController.Instance;
+        if (deathController != null)
+        {
+            deathController.TriggerDeathSequence();
+        }
+        else
+        {
+            Debug.LogWarning("No DeathController found! Death sequence not triggered.");
+        }
     }
     
     /// <summary>
