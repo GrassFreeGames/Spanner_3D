@@ -139,7 +139,7 @@ MonoBehaviour:
     m_MemoryMediaReservedLimit: 0
     m_MemoryMediaAllocSizeHuge: 2097152
     m_MemoryDebugLevel: 0
-    MaxSystemAudioObjects: 128
+    MaxSystemAudioObjects: 200
   CommsSettings:
     m_PoolSize: 262144
     m_DiscoveryBroadcastPort: 24024

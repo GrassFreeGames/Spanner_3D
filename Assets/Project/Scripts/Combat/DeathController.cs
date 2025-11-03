@@ -18,8 +18,15 @@ public class DeathController : MonoBehaviour
     [Tooltip("Wwise death sound event")]
     public AK.Wwise.Event deathSound;
     
-    [Tooltip("Wwise BGM music event to stop")]
+    [Header("Music Stop Method")]
+    [Tooltip("How to stop background music")]
+    public MusicStopMethod musicStopMethod = MusicStopMethod.StopAll;
+    
+    [Tooltip("Wwise BGM music event to stop (only used if method = StopSpecificEvent)")]
     public AK.Wwise.Event bgmMusicEvent;
+    
+    [Tooltip("GameObject that posted the music (leave null to search)")]
+    public GameObject musicSourceObject;
     
     [Header("References")]
     [Tooltip("Main camera (auto-finds if null)")]
@@ -42,6 +49,15 @@ public class DeathController : MonoBehaviour
     // Singleton pattern
     private static DeathController _instance;
     public static DeathController Instance => _instance;
+    
+    // Enum for different stop methods
+    public enum MusicStopMethod
+    {
+        StopAll,              // Stop ALL audio globally (nuclear option)
+        StopAllMusic,         // Stop all music buses (recommended)
+        StopSpecificEvent,    // Stop specific event on specific GameObject
+        StopEventGlobally     // Stop all instances of specific event
+    }
     
     void Awake()
     {
@@ -121,17 +137,8 @@ public class DeathController : MonoBehaviour
         
         _isDying = true;
         
-        // Stop background music
-        if (bgmMusicEvent != null)
-        {
-            bgmMusicEvent.Stop(gameObject);
-            if (showDebugInfo)
-                Debug.Log("Stopped BGM music");
-        }
-        else
-        {
-            Debug.LogWarning("No BGM music event assigned to stop!", this);
-        }
+        // Stop background music using selected method
+        StopBackgroundMusic();
         
         // Play death sound
         if (deathSound != null)
@@ -174,6 +181,78 @@ public class DeathController : MonoBehaviour
         
         if (showDebugInfo)
             Debug.Log("Death sequence started");
+    }
+    
+    /// <summary>
+    /// Stop background music using the selected method
+    /// </summary>
+    void StopBackgroundMusic()
+    {
+        switch (musicStopMethod)
+        {
+            case MusicStopMethod.StopAll:
+                // Nuclear option: stops ALL sounds in the game
+                AkSoundEngine.StopAll();
+                if (showDebugInfo)
+                    Debug.Log("Stopped ALL audio globally");
+                break;
+                
+            case MusicStopMethod.StopAllMusic:
+                // Stop all music buses (recommended - stops only music, keeps SFX)
+                // This stops the "Master Audio Bus" > "Music" bus
+                AkSoundEngine.SetRTPCValue("Volume_Music", 0f);
+                // Or stop by bus name if you have it set up:
+                // AkSoundEngine.StopAll(gameObject, (int)AkGameObjPosOffsetMode.AK_SetBankLoadIOSettings);
+                
+                if (showDebugInfo)
+                    Debug.Log("Stopped all music via music bus");
+                break;
+                
+            case MusicStopMethod.StopSpecificEvent:
+                // Stop specific event on specific GameObject
+                if (bgmMusicEvent != null)
+                {
+                    // Try to find the GameObject that posted the music
+                    GameObject musicObject = musicSourceObject;
+                    
+                    if (musicObject == null)
+                    {
+                        // Try to find AudioManager or similar
+                        musicObject = GameObject.Find("AudioManager");
+                        if (musicObject == null)
+                            musicObject = GameObject.Find("GameManager");
+                        if (musicObject == null)
+                            musicObject = gameObject; // Fallback to this object
+                    }
+                    
+                    bgmMusicEvent.Stop(musicObject);
+                    
+                    if (showDebugInfo)
+                        Debug.Log($"Stopped music event on {musicObject.name}");
+                }
+                else
+                {
+                    Debug.LogWarning("No BGM music event assigned!", this);
+                }
+                break;
+                
+            case MusicStopMethod.StopEventGlobally:
+                // Stop all instances of a specific event globally
+                if (bgmMusicEvent != null)
+                {
+                    // Get the event ID and stop all playing instances
+                    uint eventId = bgmMusicEvent.Id;
+                    AkSoundEngine.StopPlayingID(eventId);
+                    
+                    if (showDebugInfo)
+                        Debug.Log($"Stopped all instances of event ID {eventId} globally");
+                }
+                else
+                {
+                    Debug.LogWarning("No BGM music event assigned!", this);
+                }
+                break;
+        }
     }
     
     IEnumerator DeathSequenceCoroutine()

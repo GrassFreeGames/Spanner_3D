@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{9BA5EF4F-1162-4D49-A798-6F13D70323B2}",
     "Language": "SFX",
-    "Hash": "{D9102950-1F3C-7ADE-0AE3-E82B30B54E08}",
+    "Hash": "{D6CBFE02-DD9B-55FF-1188-2128C064763B}",
     "ObjectPath": "Weapon_Upgrade_Tier_2",
     "ShortName": "Weapon_Upgrade_Tier_2",
     "Path": "Event/Weapon_Upgrade_Tier_2.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{E4787317-ED7B-17D3-BA58-E77C1E618ADE}"
+  "FileHash": "{468DBB37-B8E9-5D93-7FAB-043F6D0E542B}"
  }
 }

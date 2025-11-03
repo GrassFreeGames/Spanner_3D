@@ -1,7 +1,7 @@
 {
  "SoundBanksInfo": {
-  "Platform": "Mac",
-  "BasePlatform": "Mac",
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
   "SchemaVersion": "16",
   "SoundBankVersion": "154",
   "SoundBanks": [
@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F632381E-8E5A-4455-9AF9-435CA51932FF}",
     "Language": "SFX",
-    "Hash": "{DE62FD44-05CE-F22F-CD0B-1C34A990CD30}",
+    "Hash": "{33C1CB77-25CC-F334-C92F-9EE042AC13E8}",
     "ObjectPath": "Weapon_Upgrade_Tier_3",
     "ShortName": "Weapon_Upgrade_Tier_3",
     "Path": "Event/Weapon_Upgrade_Tier_3.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{93447AE0-F9A6-E75F-DFF0-167C50D735A0}"
+  "FileHash": "{D995A8FF-0FCB-EA8A-FA44-5274CE8C109A}"
  }
 }

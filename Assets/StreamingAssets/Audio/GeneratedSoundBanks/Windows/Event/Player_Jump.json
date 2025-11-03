@@ -10,37 +10,39 @@
     "Type": "Event",
     "GUID": "{58CC8FE1-865C-4C1A-81DC-EB8C7DCA5DF1}",
     "Language": "SFX",
-    "Hash": "{87E83FC3-51DD-8912-3E66-A8254823EB12}",
+    "Hash": "{8F35CED9-8B97-D550-6092-72947554D44A}",
     "ObjectPath": "Player_Jump",
     "ShortName": "Player_Jump",
     "Path": "Event/Player_Jump.bnk",
     "Media": [
      {
-      "Id": "200456857",
+      "Id": "730499572",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Jump_Silly2.wav",
-      "Path": "Media/200456857.wem",
-      "CachePath": "CD/{CDE1193C-F54E-7FF3-781D-156104D8F4A5}.wem"
+      "ShortName": "Player_Jump_2.wav",
+      "Path": "Media/730499572.wem",
+      "CachePath": "99/{99FEA112-B635-7A93-6534-EC469732D173}.wem"
      }
     ],
     "Events": [
      {
       "Id": "1305133589",
       "Name": "Player_Jump",
-      "ObjectPath": "\\Events\\Default Work Unit\\Player_Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player _Actions\\Player_Jump",
       "GUID": "{58CC8FE1-865C-4C1A-81DC-EB8C7DCA5DF1}",
-      "DurationType": "Infinite",
+      "DurationType": "OneShot",
+      "DurationMin": "0.40824166",
+      "DurationMax": "0.4582358",
       "MediaRefs": [
        {
-        "Id": "200456857"
+        "Id": "730499572"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{3A3340D9-F9CC-E3A6-9A0E-8265D8BCB3FA}"
+  "FileHash": "{3AA83E21-85DC-DBD0-5B8E-DAE72A66C241}"
  }
 }

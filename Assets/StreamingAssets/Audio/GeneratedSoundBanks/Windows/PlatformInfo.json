@@ -6,11 +6,11 @@
    "Generator": "2024.1.9.8920"
   },
   "RootPaths": {
-   "ProjectRoot": "../../../../../Spanner_3D_WwiseProject",
-   "SourceFilesRoot": "../../../../../Spanner_3D_WwiseProject/.cache",
+   "ProjectRoot": "../..",
+   "SourceFilesRoot": "../../.cache",
    "SoundBanksRoot": ".",
    "ExternalSourcesInputFile": "",
-   "ExternalSourcesOutputRoot": "../../../../../Spanner_3D_WwiseProject/GeneratedSoundBanks/Windows"
+   "ExternalSourcesOutputRoot": "../../../Spanner_3D/Assets/GeneratedSoundBanks/Windows"
   },
   "DefaultAlign": "16",
   "Settings": {
@@ -33,6 +33,6 @@
    "PrintObjectPath": "true",
    "PrintObjectColor": "true"
   },
-  "FileHash": "{D9801474-3393-8CA6-3DDF-5EDB163A6AFF}"
+  "FileHash": "{3F3A331A-8671-D0C1-BF14-ED2DCC4B950D}"
  }
 }
