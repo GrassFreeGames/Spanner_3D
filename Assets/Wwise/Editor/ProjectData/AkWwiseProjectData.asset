@@ -80,7 +80,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d3164fe8003b2d4b843c874de71a3d51
     GuidInternal: 
-    m_lastTime: -8584397966549033069
+    m_lastTime: -8584394517047614243
     List:
     - name: BGM
       guid: 8d308b093526e74bb3a5eb67672dcf6f
@@ -119,6 +119,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: BGM_RandomLooping_Stop
+      guid: b0c55b319792824894d53029458b7857
+      id: 2370740652
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: BGM
+        ObjectType: 4
+        guid: 8d308b093526e74bb3a5eb67672dcf6f
+      - ElementName: BGM_RandomLooping_Stop
+        ObjectType: 3
+        guid: b0c55b319792824894d53029458b7857
+      Path: Events\Default Work Unit\BGM\BGM_RandomLooping_Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Blaster_Fire
       guid: aa2437d0ab2eed4ca47f315d7b513288
       id: 639453935
@@ -139,6 +159,63 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.46179137
       minDuration: 0.3755512
+    - name: BlasterV3_Fire
+      guid: a19a4962677ef845998df745d2491a0f
+      id: 2401202452
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      - ElementName: BlasterV3_Fire
+        ObjectType: 3
+        guid: a19a4962677ef845998df745d2491a0f
+      Path: Events\Default Work Unit\Weapons\BlasterV3_Fire
+      maxAttenuation: 0
+      maxDuration: 0.38736472
+      minDuration: 0.3352783
+    - name: Player _Actions
+      guid: 43eebdf589f3ec49b43d45b931c3bcba
+      id: 2071480598
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Player _Actions
+        ObjectType: 4
+        guid: 43eebdf589f3ec49b43d45b931c3bcba
+      Path: Events\Default Work Unit\Player _Actions
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Player_Death
+      guid: c897a85f0f80004ab2ff18be3b2ae992
+      id: 3083087645
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Player _Actions
+        ObjectType: 4
+        guid: 43eebdf589f3ec49b43d45b931c3bcba
+      - ElementName: Player_Death
+        ObjectType: 3
+        guid: c897a85f0f80004ab2ff18be3b2ae992
+      Path: Events\Default Work Unit\Player _Actions\Player_Death
+      maxAttenuation: 0
+      maxDuration: 4.064898
+      minDuration: 4.064898
     - name: Player_Jump
       guid: e18fcc585c861a4c81dceb8c7dca5df1
       id: 1305133589
@@ -149,10 +226,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Player _Actions
+        ObjectType: 4
+        guid: 43eebdf589f3ec49b43d45b931c3bcba
       - ElementName: Player_Jump
         ObjectType: 3
         guid: e18fcc585c861a4c81dceb8c7dca5df1
-      Path: Events\Default Work Unit\Player_Jump
+      Path: Events\Default Work Unit\Player _Actions\Player_Jump
       maxAttenuation: 0
       maxDuration: 0.4582358
       minDuration: 0.40824166
@@ -166,10 +246,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Player _Actions
+        ObjectType: 4
+        guid: 43eebdf589f3ec49b43d45b931c3bcba
       - ElementName: Player_Spawn_In
         ObjectType: 3
         guid: c69f7bc7a75c284489a8d52054d87b88
-      Path: Events\Default Work Unit\Player_Spawn_In
+      Path: Events\Default Work Unit\Player _Actions\Player_Spawn_In
       maxAttenuation: 0
       maxDuration: 3.597052
       minDuration: 3.597052
