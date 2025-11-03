@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1305133589",
+    "Type": "Event",
+    "GUID": "{58CC8FE1-865C-4C1A-81DC-EB8C7DCA5DF1}",
+    "Language": "SFX",
+    "Hash": "{8F35CED9-8B97-D550-6092-72947554D44A}",
+    "ObjectPath": "Player_Jump",
+    "ShortName": "Player_Jump",
+    "Path": "Event/Player_Jump.bnk",
+    "Media": [
+     {
+      "Id": "730499572",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Player_Jump_2.wav",
+      "Path": "Media/730499572.wem",
+      "CachePath": "99/{99FEA112-B635-7A93-6534-EC469732D173}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1305133589",
+      "Name": "Player_Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player _Actions\\Player_Jump",
+      "GUID": "{58CC8FE1-865C-4C1A-81DC-EB8C7DCA5DF1}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.40824166",
+      "DurationMax": "0.4582358",
+      "MediaRefs": [
+       {
+        "Id": "730499572"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C26B00F2-9E25-346B-1DE7-B6B876E8EFDC}"
+ }
+}
