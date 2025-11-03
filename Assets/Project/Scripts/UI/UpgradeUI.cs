@@ -14,6 +14,9 @@ public class UpgradeUI : MonoBehaviour
     [Tooltip("Main upgrade panel (will be shown/hidden)")]
     public GameObject upgradePanel;
     
+    [Tooltip("Canvas Group for visibility control (auto-added if missing)")]
+    public CanvasGroup panelCanvasGroup;
+    
     [Tooltip("Upgrade option buttons (should have 3)")]
     public Button[] upgradeButtons;
     
@@ -49,11 +52,47 @@ public class UpgradeUI : MonoBehaviour
         }
         _instance = this;
         
-        // CRITICAL: Hide panel immediately in Awake, even if enabled in Inspector
-        // This prevents the disabled GameObject bug
+        // Get or add CanvasGroup component
         if (upgradePanel != null)
         {
-            upgradePanel.SetActive(false);
+            if (panelCanvasGroup == null)
+            {
+                panelCanvasGroup = upgradePanel.GetComponent<CanvasGroup>();
+                if (panelCanvasGroup == null)
+                {
+                    panelCanvasGroup = upgradePanel.AddComponent<CanvasGroup>();
+                    Debug.Log("Auto-added CanvasGroup to UpgradePanel");
+                }
+            }
+            
+            // Hide panel immediately using CanvasGroup
+            HidePanelImmediate();
+        }
+    }
+    
+    /// <summary>
+    /// Hide panel immediately without interaction
+    /// </summary>
+    void HidePanelImmediate()
+    {
+        if (panelCanvasGroup != null)
+        {
+            panelCanvasGroup.alpha = 0f;
+            panelCanvasGroup.interactable = false;
+            panelCanvasGroup.blocksRaycasts = false;
+        }
+    }
+    
+    /// <summary>
+    /// Show panel and enable interaction
+    /// </summary>
+    void ShowPanelImmediate()
+    {
+        if (panelCanvasGroup != null)
+        {
+            panelCanvasGroup.alpha = 1f;
+            panelCanvasGroup.interactable = true;
+            panelCanvasGroup.blocksRaycasts = true;
         }
     }
     
@@ -127,15 +166,8 @@ public class UpgradeUI : MonoBehaviour
             }
         }
         
-        // Show panel - CRITICAL: SetActive must be called after all setup
-        if (upgradePanel != null)
-        {
-            upgradePanel.SetActive(true);
-        }
-        else
-        {
-            Debug.LogError("UpgradePanel is null! Cannot show upgrade screen.", this);
-        }
+        // Show panel using CanvasGroup
+        ShowPanelImmediate();
         
         Debug.Log("Upgrade screen shown - game paused, cursor unlocked");
     }
@@ -145,11 +177,8 @@ public class UpgradeUI : MonoBehaviour
     /// </summary>
     public void HideUpgradeScreen()
     {
-        // Hide panel
-        if (upgradePanel != null)
-        {
-            upgradePanel.SetActive(false);
-        }
+        // Hide panel using CanvasGroup
+        HidePanelImmediate();
         
         // Resume game
         Time.timeScale = 1f;

@@ -122,7 +122,7 @@ public class ExperienceManager : MonoBehaviour
         float requirement = baseExpRequirement;
         for (int i = 2; i < level; i++)
         {
-            requirement = (requirement * 1.05f) + 5f;
+            requirement = (requirement * 1.02f) + 2f;
             requirement = Mathf.Round(requirement);
         }
         
