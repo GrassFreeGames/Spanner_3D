@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B68D79AD-E975-4206-96C0-5053D4DC3718}" SchemaVersion="123" RootDocumentID="{1D7152A5-067B-45D1-9952-92E2DE031C9D}" ParentDocumentID="{1D7152A5-067B-45D1-9952-92E2DE031C9D}">
+	<AudioObjects>
+		<WorkUnit Name="BGM" ID="{B68D79AD-E975-4206-96C0-5053D4DC3718}" OwnerID="{E48CC45A-580F-4488-A7BE-C153429E2F44}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="BGM" ID="{C96B933E-8AA5-4CCA-BAE6-ED592470B7AD}" ShortID="222795094">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="BGM_Playlist" ID="{DE14A585-3251-4EE5-A8BB-71B6D686CF11}" ShortID="423195588">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-25</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Holocure_OST_Sus" ID="{87F3EBD4-0225-4428-ADBB-50353B959895}" ShortID="614790524">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Holocure_OST_Sus" ID="{3F0EE4D8-CC7B-4293-831F-A8A93BDE9B77}">
+											<Language>SFX</Language>
+											<AudioFile>Holocure_OST_Sus.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="175568426"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Holocure_OST_Sus" ID="{3F0EE4D8-CC7B-4293-831F-A8A93BDE9B77}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Undertale_OST_Bonetrousle" ID="{9C303873-B427-4901-A63F-F918E1A3CC02}" ShortID="964216136">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Undertale_OST_Bonetrousle" ID="{3477DA6F-0377-4750-A114-C3E1B1AEC80F}">
+											<Language>SFX</Language>
+											<AudioFile>Undertale_OST_Bonetrousle.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="758839327"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Undertale_OST_Bonetrousle" ID="{3477DA6F-0377-4750-A114-C3E1B1AEC80F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Undertale_OST_MEGALOVANIA" ID="{F47EB670-A562-4F9E-8AF4-39ADB105C10C}" ShortID="286230400">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Undertale_OST_MEGALOVANIA" ID="{0F28CDA2-7CE9-4B3C-8C17-CF06F81ACE69}">
+											<Language>SFX</Language>
+											<AudioFile>Undertale_OST_MEGALOVANIA.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="528344067"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Undertale_OST_MEGALOVANIA" ID="{0F28CDA2-7CE9-4B3C-8C17-CF06F81ACE69}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
