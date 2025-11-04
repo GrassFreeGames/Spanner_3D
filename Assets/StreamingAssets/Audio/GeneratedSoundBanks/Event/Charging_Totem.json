@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2008779410",
+    "Type": "Event",
+    "GUID": "{0377C51A-F5F4-4A0D-A093-CC16EDA4C2F9}",
+    "Language": "SFX",
+    "Hash": "{19EAC81F-3AB3-293F-A97C-9F0D257ABB8C}",
+    "ObjectPath": "Charging_Totem",
+    "ShortName": "Charging_Totem",
+    "Path": "Event/Charging_Totem.bnk",
+    "Events": [
+     {
+      "Id": "2008779410",
+      "Name": "Charging_Totem",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player _Actions\\Charge_Totem\\Charging_Totem",
+      "GUID": "{0377C51A-F5F4-4A0D-A093-CC16EDA4C2F9}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{0DA754E4-843B-0A98-D727-1ED0FB6016D7}"
+ }
+}

@@ -1,4 +1,4 @@
-Shader "Custom/Desaturation"
+Shader "Hidden/Desaturation"
 {
     Properties
     {
@@ -7,6 +7,7 @@ Shader "Custom/Desaturation"
     }
     SubShader
     {
+        // No culling or depth
         Cull Off ZWrite Off ZTest Always
 
         Pass
@@ -45,9 +46,12 @@ Shader "Custom/Desaturation"
                 fixed4 col = tex2D(_MainTex, i.uv);
                 
                 // Convert to grayscale using luminance formula
+                // This formula accounts for human eye sensitivity to different colors
                 float gray = dot(col.rgb, float3(0.299, 0.587, 0.114));
                 
                 // Lerp between grayscale and original based on saturation
+                // _Saturation = 1.0 -> full color
+                // _Saturation = 0.0 -> black & white
                 col.rgb = lerp(float3(gray, gray, gray), col.rgb, _Saturation);
                 
                 return col;

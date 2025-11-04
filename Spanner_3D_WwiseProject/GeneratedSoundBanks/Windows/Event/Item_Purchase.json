@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "946567574",
+    "Type": "Event",
+    "GUID": "{95584DA0-00DF-4B5D-AE93-78567B2CC75B}",
+    "Language": "SFX",
+    "Hash": "{B94AEDE5-21FF-3B62-7C17-06FA5B74FC7E}",
+    "ObjectPath": "Item_Purchase",
+    "ShortName": "Item_Purchase",
+    "Path": "Event/Item_Purchase.bnk",
+    "Media": [
+     {
+      "Id": "826779293",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Buy_Item.wav",
+      "Path": "Media/826779293.wem",
+      "CachePath": "69/{69C3311B-CAFB-18B9-B0B2-DB7EE619A4F5}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "946567574",
+      "Name": "Item_Purchase",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Item_Purchase",
+      "GUID": "{95584DA0-00DF-4B5D-AE93-78567B2CC75B}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.0482086",
+      "DurationMax": "1.0482086",
+      "MediaRefs": [
+       {
+        "Id": "826779293"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BDD09FB7-B246-6EF1-7DF5-07A8BDB9637B}"
+ }
+}

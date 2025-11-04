@@ -92,11 +92,12 @@ public class DeathUI : MonoBehaviour
         // Show panel
         ShowPanelImmediate();
         
-        // Cursor is already unlocked from death sequence
-        // Game is already paused (Time.timeScale = 0)
+        // Unlock and show cursor for button interaction
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         
         if (showDebugInfo)
-            Debug.Log("Death screen shown");
+            Debug.Log("Death screen shown - cursor unlocked and visible");
     }
     
     /// <summary>
@@ -117,6 +118,13 @@ public class DeathUI : MonoBehaviour
     {
         if (showDebugInfo)
             Debug.Log("Okay button clicked - showing post-game stats");
+        
+        // Stop camera orbit
+        DeathController deathController = DeathController.Instance;
+        if (deathController != null)
+        {
+            deathController.StopCameraOrbit();
+        }
         
         // Hide death screen
         HideDeathScreen();
