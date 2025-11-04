@@ -144,10 +144,16 @@ public class PlayerStats : MonoBehaviour
     void ApplyEnemyKick(Vector3 sourcePosition)
     {
         // Calculate direction away from source
-        Vector3 kickDirection = (transform.position - sourcePosition).normalized;
+        Vector3 kickDirection = transform.position - sourcePosition;
         
-        // Keep kick mostly horizontal (reduce Y component)
-        kickDirection.y = Mathf.Min(kickDirection.y, 0.2f);
+        // Get horizontal magnitude for reference
+        float horizontalMagnitude = new Vector2(kickDirection.x, kickDirection.z).magnitude;
+        
+        // Clamp Y component to maximum 30% of horizontal magnitude
+        // This prevents extreme upward angles while keeping natural physics feel
+        kickDirection.y = Mathf.Clamp(kickDirection.y, -horizontalMagnitude * 0.1f, horizontalMagnitude * 0.1f);
+        
+        // Normalize for consistent force magnitude
         kickDirection.Normalize();
         
         // Clear current velocity and apply kick impulse
@@ -158,7 +164,7 @@ public class PlayerStats : MonoBehaviour
         _enemyKickEndTime = Time.time + enemyKickDuration;
         
         if (showDebugInfo)
-            Debug.Log($"Player kicked back with force {enemyKickForce}!");
+            Debug.Log($"Player kicked back with force {enemyKickForce}! Direction: {kickDirection} (Y clamped to 30% of horizontal)");
     }
     
     /// <summary>

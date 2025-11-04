@@ -68,6 +68,28 @@
 								</Event>
 							</ChildrenList>
 						</Folder>
+						<Event Name="Level_Up" ID="{0FB52ECE-02A6-467D-93F5-0A7A338BEA51}">
+							<ChildrenList>
+								<Action Name="" ID="{AF149A23-291C-4722-A32E-940F6DF0E92D}" ShortID="389508494">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Level_Up" ID="{2FAB7CD9-2141-4A9B-8B18-E50312702D50}" WorkUnitID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Item_Purchase" ID="{95584DA0-00DF-4B5D-AE93-78567B2CC75B}">
+							<ChildrenList>
+								<Action Name="" ID="{254EA8B5-30E8-4D92-A32F-E0103A3D573F}" ShortID="414736608">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Buy_Item" ID="{03B9C706-EE98-4DBC-863F-FC31BE0B5D2B}" WorkUnitID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Weapons" ID="{BAC171B7-7D40-432A-AEEC-C61F5B85B8E4}" ShortID="625354996">
@@ -131,6 +153,13 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Bottle_Smash" ID="{D5265636-E510-4FA6-9833-4C65FC4AC73D}"/>
+						<Folder Name="Charge_Totem" ID="{DD8F8D91-B692-468F-9E22-4C6CF097BA1E}" ShortID="748190937">
+							<ChildrenList>
+								<Event Name="Charging_Totem" ID="{0377C51A-F5F4-4A0D-A093-CC16EDA4C2F9}"/>
+								<Event Name="Totem_Finish" ID="{B9E67969-9BC6-4714-B97E-3773356C4DE3}"/>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

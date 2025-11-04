@@ -17,9 +17,14 @@ namespace AK
         static const AkUniqueID BGM_RANDOMLOOPING_STOP = 2370740652U;
         static const AkUniqueID BLASTER_FIRE = 639453935U;
         static const AkUniqueID BLASTERV3_FIRE = 2401202452U;
+        static const AkUniqueID BOTTLE_SMASH = 3295549328U;
+        static const AkUniqueID CHARGING_TOTEM = 2008779410U;
+        static const AkUniqueID ITEM_PURCHASE = 946567574U;
+        static const AkUniqueID LEVEL_UP = 2145291615U;
         static const AkUniqueID PLAYER_DEATH = 3083087645U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
         static const AkUniqueID PLAYER_SPAWN_IN = 2311955112U;
+        static const AkUniqueID TOTEM_FINISH = 39357614U;
         static const AkUniqueID WEAPON_UPGRADE_TIER_1 = 3850320119U;
         static const AkUniqueID WEAPON_UPGRADE_TIER_2 = 3850320116U;
         static const AkUniqueID WEAPON_UPGRADE_TIER_3 = 3850320117U;

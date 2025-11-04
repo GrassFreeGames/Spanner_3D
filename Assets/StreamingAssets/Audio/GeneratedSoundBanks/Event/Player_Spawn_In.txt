@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2311955112	Player_Spawn_In			\Default Work Unit\Player _Actions\Player_Spawn_In	
+
