@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "39357614",
+    "Type": "Event",
+    "GUID": "{B9E67969-9BC6-4714-B97E-3773356C4DE3}",
+    "Language": "SFX",
+    "Hash": "{416340CE-9E8F-5245-1BCF-B30577C14E34}",
+    "ObjectPath": "Totem_Finish",
+    "ShortName": "Totem_Finish",
+    "Path": "Event/Totem_Finish.bnk",
+    "Events": [
+     {
+      "Id": "39357614",
+      "Name": "Totem_Finish",
+      "ObjectPath": "\\Events\\Default Work Unit\\Player _Actions\\Charge_Totem\\Totem_Finish",
+      "GUID": "{B9E67969-9BC6-4714-B97E-3773356C4DE3}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{DF97F181-3DF3-4142-495E-183DBB7FC92F}"
+ }
+}

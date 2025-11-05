@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5FA897C8-800F-4A00-B2FF-18BE3B2AE992}",
     "Language": "SFX",
-    "Hash": "{7E5D9A05-6D09-4419-BC0E-9C78650268C3}",
+    "Hash": "{950D962A-570E-A83B-147A-D26128DB6BC9}",
     "ObjectPath": "Player_Death",
     "ShortName": "Player_Death",
     "Path": "Event/Player_Death.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Player_Death.wav",
       "Path": "Media/958503205.wem",
-      "CachePath": "6C/{6CCA4675-667C-50F4-C700-B40455E2EA53}.wem"
+      "CachePath": "4E/{4E3BA4DB-6C0D-D213-DFA7-260EEEC4CA02}.wem"
      }
     ],
     "Events": [
@@ -32,8 +32,8 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Player _Actions\\Player_Death",
       "GUID": "{5FA897C8-800F-4A00-B2FF-18BE3B2AE992}",
       "DurationType": "OneShot",
-      "DurationMin": "4.064898",
-      "DurationMax": "4.064898",
+      "DurationMin": "4.586576",
+      "DurationMax": "4.586576",
       "MediaRefs": [
        {
         "Id": "958503205"
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{D9A440AE-C188-9055-2FC8-332CD12952F1}"
+  "FileHash": "{3B0AF3FB-D043-72FD-1C1C-74B322C8DF69}"
  }
 }
