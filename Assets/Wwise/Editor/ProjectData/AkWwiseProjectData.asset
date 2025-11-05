@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 4be1b35c6b771a43ac5c140a4a1b2c3b
     GuidInternal: 
-    m_lastTime: -8584394501728078752
+    m_lastTime: -8584393692852233584
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 096955bf1e6ce0428360ca27b606d02f
     GuidInternal: 
-    m_lastTime: -8584394501732659018
+    m_lastTime: -8584393692850179076
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 51c67d26dcc4144abfbaff93f25db092
     GuidInternal: 
-    m_lastTime: -8584394501728120582
+    m_lastTime: -8584393692851964305
     List: []
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
@@ -80,7 +80,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d3164fe8003b2d4b843c874de71a3d51
     GuidInternal: 
-    m_lastTime: -8584394501740453495
+    m_lastTime: -8584393692850867239
     List:
     - name: BGM
       guid: 8d308b093526e74bb3a5eb67672dcf6f
@@ -179,6 +179,109 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.38736472
       minDuration: 0.3352783
+    - name: Bottle_Smash
+      guid: 365626d510e5a64f98334c65fc4ac73d
+      id: 3295549328
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Player _Actions
+        ObjectType: 4
+        guid: 43eebdf589f3ec49b43d45b931c3bcba
+      - ElementName: Bottle_Smash
+        ObjectType: 3
+        guid: 365626d510e5a64f98334c65fc4ac73d
+      Path: Events\Default Work Unit\Player _Actions\Bottle_Smash
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Charge_Totem
+      guid: 918d8fdd92b68f469e224c6cf097ba1e
+      id: 1925608523
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Player _Actions
+        ObjectType: 4
+        guid: 43eebdf589f3ec49b43d45b931c3bcba
+      - ElementName: Charge_Totem
+        ObjectType: 4
+        guid: 918d8fdd92b68f469e224c6cf097ba1e
+      Path: Events\Default Work Unit\Player _Actions\Charge_Totem
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Charging_Totem
+      guid: 1ac57703f4f50d4aa093cc16eda4c2f9
+      id: 2008779410
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Player _Actions
+        ObjectType: 4
+        guid: 43eebdf589f3ec49b43d45b931c3bcba
+      - ElementName: Charge_Totem
+        ObjectType: 4
+        guid: 918d8fdd92b68f469e224c6cf097ba1e
+      - ElementName: Charging_Totem
+        ObjectType: 3
+        guid: 1ac57703f4f50d4aa093cc16eda4c2f9
+      Path: Events\Default Work Unit\Player _Actions\Charge_Totem\Charging_Totem
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Item_Purchase
+      guid: a04d5895df005d4bae9378567b2cc75b
+      id: 946567574
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Item_Purchase
+        ObjectType: 3
+        guid: a04d5895df005d4bae9378567b2cc75b
+      Path: Events\Default Work Unit\UI\Item_Purchase
+      maxAttenuation: 0
+      maxDuration: 1.0482086
+      minDuration: 1.0482086
+    - name: Level_Up
+      guid: ce2eb50fa6027d4693f50a7a338bea51
+      id: 2145291615
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Level_Up
+        ObjectType: 3
+        guid: ce2eb50fa6027d4693f50a7a338bea51
+      Path: Events\Default Work Unit\UI\Level_Up
+      maxAttenuation: 0
+      maxDuration: 1.7746155
+      minDuration: 1.7746155
     - name: Player _Actions
       guid: 43eebdf589f3ec49b43d45b931c3bcba
       id: 2071480598
@@ -214,8 +317,8 @@ MonoBehaviour:
         guid: c897a85f0f80004ab2ff18be3b2ae992
       Path: Events\Default Work Unit\Player _Actions\Player_Death
       maxAttenuation: 0
-      maxDuration: 4.064898
-      minDuration: 4.064898
+      maxDuration: 4.586576
+      minDuration: 4.586576
     - name: Player_Jump
       guid: e18fcc585c861a4c81dceb8c7dca5df1
       id: 1305133589
@@ -256,6 +359,29 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3.597052
       minDuration: 3.597052
+    - name: Totem_Finish
+      guid: 6979e6b9c69b1447b97e3773356c4de3
+      id: 39357614
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Player _Actions
+        ObjectType: 4
+        guid: 43eebdf589f3ec49b43d45b931c3bcba
+      - ElementName: Charge_Totem
+        ObjectType: 4
+        guid: 918d8fdd92b68f469e224c6cf097ba1e
+      - ElementName: Totem_Finish
+        ObjectType: 3
+        guid: 6979e6b9c69b1447b97e3773356c4de3
+      Path: Events\Default Work Unit\Player _Actions\Charge_Totem\Totem_Finish
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: UI
       guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
       id: 1551306167
@@ -391,7 +517,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: fbdea55a52200c4281dedee67f5860ff
     GuidInternal: 
-    m_lastTime: -8584394501740453495
+    m_lastTime: -8584393692850667770
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -405,7 +531,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: a25d75e950f24248b0db7df4dfd5db2d
     GuidInternal: 
-    m_lastTime: -8584394501728094281
+    m_lastTime: -8584393692851525476
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -419,7 +545,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 28cf75c4ceaea64ca515a4b330b8852c
     GuidInternal: 
-    m_lastTime: -8584394501728089139
+    m_lastTime: -8584393692850747554
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -433,11 +559,11 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: 12e4f9d7d235b546ac7c5997a2b5ab8d
     GuidInternal: 
-    m_lastTime: -8584394501728083879
+    m_lastTime: -8584393692851615238
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000050000000600000007000000080000000b0000002700000028000000460000004700000049000000660000006700000068000000b4000000b5000000ba000000
-  AutoSyncSelection: 0
+  ExpandedWaapiItemIds: 010000000300000004000000050000000600000007000000080000000b0000002700000028000000460000004700000049000000660000006700000068000000b4000000b5000000ba000000
+  AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0
   CurrentPluginConfig: 

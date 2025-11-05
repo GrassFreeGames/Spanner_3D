@@ -8,13 +8,6 @@
   "CacheRoot": "../../../../Spanner_3D_WwiseProject/.cache",
   "Platforms": [
    {
-    "Name": "Mac",
-    "GUID": "{259D8E51-3F36-4175-B070-B184799FE678}",
-    "BasePlatform": "Mac",
-    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
-    "Path": "../../../../Spanner_3D_WwiseProject/GeneratedSoundBanks/Mac"
-   },
-   {
     "Name": "Windows",
     "GUID": "{5FEA2090-9608-4F9C-ADEF-0D9642B655E0}",
     "BasePlatform": "Windows",
@@ -31,6 +24,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{F23E9560-1FEE-A600-AC20-BC07C13B428A}"
+  "FileHash": "{1BA8E906-E385-7F73-66AD-BFCAEE2D3C5A}"
  }
 }

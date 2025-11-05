@@ -1504,15 +1504,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathController
   deathSequenceDuration: 4
-  zoomOutAmount: 20
+  zoomOutAmount: -20
+  orbitSpeed: 10
   deathSound:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 68d1bb6503c49d3468319bdcb5a6bffd, type: 2}
+  musicStopMethod: 0
   bgmMusicEvent:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 87744e046ffa790478b1371eb3dfd9d0, type: 2}
+  musicSourceObject: {fileID: 0}
   mainCamera: {fileID: 330585545}
   desaturationMaterial: {fileID: 0}
   playerObject: {fileID: 1718185276}
@@ -3185,7 +3188,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 674526281}
-  - component: {fileID: 674526282}
   m_Layer: 0
   m_Name: CameraHolder
   m_TagString: Untagged
@@ -3208,18 +3210,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 703255059}
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
---- !u!114 &674526282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674526280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 444508808f48ed44f8fb7488af7ceb3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &703255058
 GameObject:
   m_ObjectHideFlags: 0
@@ -8088,7 +8078,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2374643018210269670, guid: df86e656bd9543e4f8df89bf3800175e, type: 3}
       propertyPath: enemyKickForce
-      value: 15
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374643018210269670, guid: df86e656bd9543e4f8df89bf3800175e, type: 3}
+      propertyPath: enemyKickDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6822389316435521239, guid: df86e656bd9543e4f8df89bf3800175e, type: 3}
       propertyPath: m_Name

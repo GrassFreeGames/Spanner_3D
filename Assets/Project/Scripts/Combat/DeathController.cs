@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using System.Collections;
 
 /// <summary>
 /// Handles player death sequence: camera zoom out and desaturation.
-/// ATTACH TO MAIN CAMERA for OnRenderImage to work.
+/// Works with URP Volume-based saturation effect.
 /// </summary>
 public class DeathController : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class DeathController : MonoBehaviour
     
     [Tooltip("How much to zoom out (field of view increase)")]
     public float zoomOutAmount = 20f;
+    
+    [Tooltip("Camera orbit speed (degrees per second)")]
+    public float orbitSpeed = 30f; // 30 deg/sec = 12 seconds per full rotation
     
     [Header("Audio")]
     [Tooltip("Wwise death sound event")]
@@ -32,8 +36,8 @@ public class DeathController : MonoBehaviour
     [Tooltip("Main camera (auto-finds if null)")]
     public Camera mainCamera;
     
-    [Tooltip("Material for desaturation effect (optional - uses shader if null)")]
-    public Material desaturationMaterial;
+    [Tooltip("Volume containing the Saturation Effect (auto-finds if null)")]
+    public Volume saturationVolume;
     
     [Tooltip("Player GameObject to disable on death (auto-finds if null)")]
     public GameObject playerObject;
@@ -43,8 +47,13 @@ public class DeathController : MonoBehaviour
     
     // Private fields: _camelCase
     private float _originalFOV;
-    private Material _desatMat;
     private bool _isDying = false;
+    private bool _isOrbiting = false;
+    private ThirdPersonCamera _thirdPersonCamera;
+    private float _orbitAngle = 0f;
+    private float _orbitDistance = 0f; // Store initial distance
+    private float _orbitHeight = 0f;   // Store initial height offset
+    private SaturationVolume _saturationEffect;
     
     // Singleton pattern
     private static DeathController _instance;
@@ -80,6 +89,13 @@ public class DeathController : MonoBehaviour
         if (mainCamera != null)
         {
             _originalFOV = mainCamera.fieldOfView;
+            
+            // Get ThirdPersonCamera component for orbit control
+            _thirdPersonCamera = mainCamera.GetComponent<ThirdPersonCamera>();
+            if (_thirdPersonCamera == null)
+            {
+                Debug.LogWarning("No ThirdPersonCamera found on Main Camera. Camera orbit will not work.", this);
+            }
         }
         else
         {
@@ -100,31 +116,79 @@ public class DeathController : MonoBehaviour
             }
         }
         
-        // Create desaturation material if not provided
-        if (desaturationMaterial == null)
+        // Setup saturation volume
+        if (saturationVolume == null)
         {
-            // Simple desaturation shader
-            Shader desatShader = Shader.Find("Hidden/Desaturation");
-            if (desatShader != null)
+            saturationVolume = FindObjectOfType<Volume>();
+            
+            if (saturationVolume == null)
             {
-                _desatMat = new Material(desatShader);
+                Debug.LogError("❌ NO VOLUME FOUND!\n\n" +
+                    "To fix:\n" +
+                    "1. Create a GameObject in your scene\n" +
+                    "2. Add a 'Volume' component to it\n" +
+                    "3. Check 'Is Global' on the Volume\n" +
+                    "4. Add Override > Custom > Saturation Effect\n" +
+                    "5. Set Saturation to 1.0 (normal)\n" +
+                    "6. Assign the Volume to this DeathController", this);
+            }
+        }
+        
+        if (saturationVolume != null)
+        {
+            // Get the SaturationVolume component from the volume's profile
+            if (saturationVolume.profile.TryGet(out SaturationVolume satEffect))
+            {
+                _saturationEffect = satEffect;
+                
+                // Initialize to full color
+                _saturationEffect.saturation.value = 1f;
+                
                 if (showDebugInfo)
-                    Debug.Log("Created desaturation material from shader");
+                    Debug.Log("✓ Saturation volume found and initialized (Saturation = 1.0)");
             }
             else
             {
-                Debug.LogError("Desaturation shader not found! Make sure 'Desaturation.shader' is in your project at Assets/Shaders/Desaturation.shader", this);
+                Debug.LogError("❌ NO SATURATION EFFECT IN VOLUME!\n\n" +
+                    "To fix:\n" +
+                    "1. Select your Volume GameObject\n" +
+                    "2. In Inspector, click 'Add Override'\n" +
+                    "3. Select Custom > Saturation Effect\n" +
+                    "4. Set Saturation to 1.0", this);
             }
         }
-        else
+    }
+    
+    void Update()
+    {
+        // Handle camera orbit during death
+        if (_isOrbiting && playerObject != null && mainCamera != null)
         {
-            _desatMat = desaturationMaterial;
-        }
-        
-        // Initialize saturation to full color
-        if (_desatMat != null)
-        {
-            _desatMat.SetFloat("_Saturation", 1f);
+            // Increment orbit angle (uses unscaled time since game is paused)
+            _orbitAngle += orbitSpeed * Time.unscaledDeltaTime;
+            
+            // Wrap angle to 0-360
+            if (_orbitAngle >= 360f)
+                _orbitAngle -= 360f;
+            
+            // Calculate new camera position using STORED distance and height
+            float radians = _orbitAngle * Mathf.Deg2Rad;
+            Vector3 offset = new Vector3(
+                Mathf.Cos(radians) * _orbitDistance,
+                _orbitHeight,
+                Mathf.Sin(radians) * _orbitDistance
+            );
+            
+            // Set camera position
+            mainCamera.transform.position = playerObject.transform.position + offset;
+            
+            // Look at player
+            Vector3 lookAtPoint = playerObject.transform.position;
+            if (_thirdPersonCamera != null)
+            {
+                lookAtPoint += _thirdPersonCamera.lookAtOffset;
+            }
+            mainCamera.transform.LookAt(lookAtPoint);
         }
     }
     
@@ -146,7 +210,36 @@ public class DeathController : MonoBehaviour
             deathSound.Post(gameObject);
         }
         
-        // Disable player controls (but keep object active for camera to follow)
+        // PAUSE GAME IMMEDIATELY (before animation starts)
+        Time.timeScale = 0f;
+        
+        if (showDebugInfo)
+            Debug.Log("Game paused immediately on death");
+        
+        // Disable ThirdPersonCamera control and start orbit
+        if (_thirdPersonCamera != null)
+        {
+            _thirdPersonCamera.enabled = false;
+            
+            // Store initial camera distance and height (BEFORE zoom changes anything)
+            _orbitDistance = Vector3.Distance(
+                new Vector3(mainCamera.transform.position.x, 0, mainCamera.transform.position.z),
+                new Vector3(playerObject.transform.position.x, 0, playerObject.transform.position.z)
+            );
+            _orbitHeight = mainCamera.transform.position.y - playerObject.transform.position.y;
+            
+            // Calculate starting orbit angle based on current camera position
+            Vector3 directionToCamera = mainCamera.transform.position - playerObject.transform.position;
+            _orbitAngle = Mathf.Atan2(directionToCamera.z, directionToCamera.x) * Mathf.Rad2Deg;
+            
+            // Start orbiting
+            _isOrbiting = true;
+            
+            if (showDebugInfo)
+                Debug.Log($"Camera orbit started at angle {_orbitAngle}° (distance: {_orbitDistance:F2}, height: {_orbitHeight:F2})");
+        }
+        
+        // Disable player controls
         if (playerObject != null)
         {
             // Disable movement script
@@ -173,14 +266,67 @@ public class DeathController : MonoBehaviour
             {
                 rb.linearVelocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true; // Make kinematic to prevent physics
             }
         }
         
-        // Start death animation
+        // Freeze all enemies
+        FreezeAllEnemies();
+        
+        // Disable spawn manager
+        SpawnManager spawnManager = SpawnManager.Instance;
+        if (spawnManager != null)
+        {
+            spawnManager.enabled = false;
+            if (showDebugInfo)
+                Debug.Log("Disabled spawn manager");
+        }
+        
+        // Start death animation (uses unscaled time)
         StartCoroutine(DeathSequenceCoroutine());
         
         if (showDebugInfo)
-            Debug.Log("Death sequence started");
+            Debug.Log("Death sequence started - game frozen");
+    }
+    
+    /// <summary>
+    /// Freeze all enemies in place
+    /// </summary>
+    void FreezeAllEnemies()
+    {
+        Enemy[] allEnemies = FindObjectsOfType<Enemy>();
+        foreach (Enemy enemy in allEnemies)
+        {
+            // Disable chase behavior
+            EnemyChase3D chase = enemy.GetComponent<EnemyChase3D>();
+            if (chase != null)
+            {
+                chase.enabled = false;
+            }
+            
+            // Stop rigidbody
+            Rigidbody rb = enemy.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.linearVelocity = Vector3.zero;
+                rb.angularVelocity = Vector3.zero;
+                rb.isKinematic = true; // Make kinematic to freeze
+            }
+        }
+        
+        if (showDebugInfo)
+            Debug.Log($"Froze {allEnemies.Length} enemies");
+    }
+    
+    /// <summary>
+    /// Stop camera orbit (called when player clicks "Okay" button)
+    /// </summary>
+    public void StopCameraOrbit()
+    {
+        _isOrbiting = false;
+        
+        if (showDebugInfo)
+            Debug.Log("Camera orbit stopped");
     }
     
     /// <summary>
@@ -259,10 +405,10 @@ public class DeathController : MonoBehaviour
     {
         float elapsed = 0f;
         
-        // Phase 1: Zoom and desaturate over 4 seconds
+        // Phase 1: Zoom and desaturate over 4 seconds (using unscaled time since game is paused)
         while (elapsed < deathSequenceDuration)
         {
-            elapsed += Time.unscaledDeltaTime; // Use unscaled time in case we pause later
+            elapsed += Time.unscaledDeltaTime; // MUST use unscaled since Time.timeScale = 0
             float t = elapsed / deathSequenceDuration;
             
             // Zoom out camera
@@ -271,10 +417,10 @@ public class DeathController : MonoBehaviour
                 mainCamera.fieldOfView = Mathf.Lerp(_originalFOV, _originalFOV + zoomOutAmount, t);
             }
             
-            // Desaturation handled in OnRenderImage
-            if (_desatMat != null)
+            // Desaturate using Volume system
+            if (_saturationEffect != null)
             {
-                _desatMat.SetFloat("_Saturation", Mathf.Lerp(1f, 0f, t));
+                _saturationEffect.saturation.value = Mathf.Lerp(1f, 0f, t);
             }
             
             yield return null;
@@ -285,9 +431,9 @@ public class DeathController : MonoBehaviour
         {
             mainCamera.fieldOfView = _originalFOV + zoomOutAmount;
         }
-        if (_desatMat != null)
+        if (_saturationEffect != null)
         {
-            _desatMat.SetFloat("_Saturation", 0f);
+            _saturationEffect.saturation.value = 0f;
         }
         
         if (showDebugInfo)
@@ -296,8 +442,7 @@ public class DeathController : MonoBehaviour
         // Phase 2: Wait additional 0.5 seconds before showing "You Died"
         yield return new WaitForSecondsRealtime(0.5f);
         
-        // Pause the game NOW (after death sequence, before UI)
-        Time.timeScale = 0f;
+        // Game is already paused (Time.timeScale = 0 from TriggerDeathSequence)
         
         // Show "You Died" screen
         DeathUI deathUI = DeathUI.Instance;
@@ -311,18 +456,6 @@ public class DeathController : MonoBehaviour
         }
         
         if (showDebugInfo)
-            Debug.Log("Death sequence complete - game paused, UI shown");
-    }
-    
-    void OnRenderImage(RenderTexture source, RenderTexture destination)
-    {
-        if (_isDying && _desatMat != null)
-        {
-            Graphics.Blit(source, destination, _desatMat);
-        }
-        else
-        {
-            Graphics.Blit(source, destination);
-        }
+            Debug.Log("Death sequence complete - UI shown");
     }
 }
