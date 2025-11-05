@@ -151,7 +151,7 @@ public class PlayerStats : MonoBehaviour
         
         // Clamp Y component to maximum 30% of horizontal magnitude
         // This prevents extreme upward angles while keeping natural physics feel
-        kickDirection.y = Mathf.Clamp(kickDirection.y, -horizontalMagnitude * 0.1f, horizontalMagnitude * 0.1f);
+        kickDirection.y = Mathf.Clamp(kickDirection.y, -horizontalMagnitude * 0.05f, horizontalMagnitude * 0.05f);
         
         // Normalize for consistent force magnitude
         kickDirection.Normalize();

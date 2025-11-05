@@ -28,5 +28,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SaturationVolume
   active: 1
   saturation:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1

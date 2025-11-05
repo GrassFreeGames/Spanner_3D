@@ -152,6 +152,13 @@
 									</ReferenceList>
 									<ChildrenList>
 										<Sound Name="Player_Death" ID="{C4BCBBAE-1089-4F21-B0DA-832857A5E3BB}" ShortID="568472958">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
@@ -171,6 +178,28 @@
 											</ChildrenList>
 											<ActiveSourceList>
 												<ActiveSource Name="Player_Death" ID="{A118ACC1-DA65-4F0D-BC69-50DA9E1CDB92}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Player_Death_v2" ID="{504A3FBA-B447-42C4-9A4E-756CF97253EA}" ShortID="821407260">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Player_Death_v2" ID="{F294675E-8421-45A5-B761-35B221315833}">
+													<Language>SFX</Language>
+													<AudioFile>Player_Death_v2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="599617188"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Player_Death_v2" ID="{F294675E-8421-45A5-B761-35B221315833}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
