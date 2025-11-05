@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 using System.Collections;
 
 /// <summary>
 /// Handles player death sequence: camera zoom out and desaturation.
-/// ATTACH TO MAIN CAMERA for OnRenderImage to work.
+/// Works with URP Volume-based saturation effect.
 /// </summary>
 public class DeathController : MonoBehaviour
 {
@@ -35,8 +36,8 @@ public class DeathController : MonoBehaviour
     [Tooltip("Main camera (auto-finds if null)")]
     public Camera mainCamera;
     
-    [Tooltip("Material for desaturation effect (optional - uses shader if null)")]
-    public Material desaturationMaterial;
+    [Tooltip("Volume containing the Saturation Effect (auto-finds if null)")]
+    public Volume saturationVolume;
     
     [Tooltip("Player GameObject to disable on death (auto-finds if null)")]
     public GameObject playerObject;
@@ -46,13 +47,13 @@ public class DeathController : MonoBehaviour
     
     // Private fields: _camelCase
     private float _originalFOV;
-    private Material _desatMat;
     private bool _isDying = false;
     private bool _isOrbiting = false;
     private ThirdPersonCamera _thirdPersonCamera;
     private float _orbitAngle = 0f;
     private float _orbitDistance = 0f; // Store initial distance
     private float _orbitHeight = 0f;   // Store initial height offset
+    private SaturationVolume _saturationEffect;
     
     // Singleton pattern
     private static DeathController _instance;
@@ -115,27 +116,46 @@ public class DeathController : MonoBehaviour
             }
         }
         
-        // Setup desaturation material
-        if (desaturationMaterial == null)
+        // Setup saturation volume
+        if (saturationVolume == null)
         {
-            Debug.LogError("❌ NO DESATURATION MATERIAL ASSIGNED!\n\n" +
-                "To fix:\n" +
-                "1. Create a Material in Unity (Right-click → Create → Material)\n" +
-                "2. Name it 'DesaturationMaterial'\n" +
-                "3. Set its Shader to 'Custom/Desaturation'\n" +
-                "4. Drag the material to the 'Desaturation Material' field on this component\n\n" +
-                "The shader file should be at: Assets/Project/Art/Shaders/Desaturation.shader\n" +
-                "First line should be: Shader \"Custom/Desaturation\"", this);
+            saturationVolume = FindObjectOfType<Volume>();
+            
+            if (saturationVolume == null)
+            {
+                Debug.LogError("❌ NO VOLUME FOUND!\n\n" +
+                    "To fix:\n" +
+                    "1. Create a GameObject in your scene\n" +
+                    "2. Add a 'Volume' component to it\n" +
+                    "3. Check 'Is Global' on the Volume\n" +
+                    "4. Add Override > Custom > Saturation Effect\n" +
+                    "5. Set Saturation to 1.0 (normal)\n" +
+                    "6. Assign the Volume to this DeathController", this);
+            }
         }
-        else
+        
+        if (saturationVolume != null)
         {
-            _desatMat = desaturationMaterial;
-            
-            // Initialize saturation to full color
-            _desatMat.SetFloat("_Saturation", 1f);
-            
-            if (showDebugInfo)
-                Debug.Log("✓ Desaturation material assigned and initialized (Saturation = 1.0)");
+            // Get the SaturationVolume component from the volume's profile
+            if (saturationVolume.profile.TryGet(out SaturationVolume satEffect))
+            {
+                _saturationEffect = satEffect;
+                
+                // Initialize to full color
+                _saturationEffect.saturation.value = 1f;
+                
+                if (showDebugInfo)
+                    Debug.Log("✓ Saturation volume found and initialized (Saturation = 1.0)");
+            }
+            else
+            {
+                Debug.LogError("❌ NO SATURATION EFFECT IN VOLUME!\n\n" +
+                    "To fix:\n" +
+                    "1. Select your Volume GameObject\n" +
+                    "2. In Inspector, click 'Add Override'\n" +
+                    "3. Select Custom > Saturation Effect\n" +
+                    "4. Set Saturation to 1.0", this);
+            }
         }
     }
     
@@ -397,10 +417,10 @@ public class DeathController : MonoBehaviour
                 mainCamera.fieldOfView = Mathf.Lerp(_originalFOV, _originalFOV + zoomOutAmount, t);
             }
             
-            // Desaturation handled in OnRenderImage
-            if (_desatMat != null)
+            // Desaturate using Volume system
+            if (_saturationEffect != null)
             {
-                _desatMat.SetFloat("_Saturation", Mathf.Lerp(1f, 0f, t));
+                _saturationEffect.saturation.value = Mathf.Lerp(1f, 0f, t);
             }
             
             yield return null;
@@ -411,9 +431,9 @@ public class DeathController : MonoBehaviour
         {
             mainCamera.fieldOfView = _originalFOV + zoomOutAmount;
         }
-        if (_desatMat != null)
+        if (_saturationEffect != null)
         {
-            _desatMat.SetFloat("_Saturation", 0f);
+            _saturationEffect.saturation.value = 0f;
         }
         
         if (showDebugInfo)
@@ -437,24 +457,5 @@ public class DeathController : MonoBehaviour
         
         if (showDebugInfo)
             Debug.Log("Death sequence complete - UI shown");
-    }
-    
-    void OnRenderImage(RenderTexture source, RenderTexture destination)
-    {
-        if (_isDying && _desatMat != null)
-        {
-            if (showDebugInfo && Time.frameCount % 60 == 0) // Log once per second
-                Debug.Log($"Desaturation active - Saturation: {_desatMat.GetFloat("_Saturation")}");
-            
-            Graphics.Blit(source, destination, _desatMat);
-        }
-        else
-        {
-            if (_isDying && _desatMat == null && showDebugInfo)
-            {
-                Debug.LogError("Desaturation material is NULL! OnRenderImage cannot apply effect.");
-            }
-            Graphics.Blit(source, destination);
-        }
     }
 }
