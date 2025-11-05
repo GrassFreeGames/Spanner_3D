@@ -1517,7 +1517,7 @@ MonoBehaviour:
     WwiseObjectReference: {fileID: 11400000, guid: 87744e046ffa790478b1371eb3dfd9d0, type: 2}
   musicSourceObject: {fileID: 0}
   mainCamera: {fileID: 330585545}
-  desaturationMaterial: {fileID: 0}
+  saturationVolume: {fileID: 0}
   playerObject: {fileID: 1718185276}
   showDebugInfo: 0
 --- !u!1 &353689929
@@ -2419,6 +2419,7 @@ Transform:
   - {fileID: 600619291}
   - {fileID: 832575519}
   - {fileID: 1184504469}
+  - {fileID: 1659951350}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458266164
@@ -5979,6 +5980,55 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1659951349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1659951350}
+  - component: {fileID: 1659951351}
+  m_Layer: 0
+  m_Name: SaturationEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1659951350
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659951349}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.14285, y: 0, z: -6.97535}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 451148213}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1659951351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659951349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 84eaa6e7549006e40b3e7144d2d14856, type: 2}
 --- !u!1 &1672383392
 GameObject:
   m_ObjectHideFlags: 0
@@ -8078,11 +8128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2374643018210269670, guid: df86e656bd9543e4f8df89bf3800175e, type: 3}
       propertyPath: enemyKickForce
-      value: 50
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2374643018210269670, guid: df86e656bd9543e4f8df89bf3800175e, type: 3}
       propertyPath: enemyKickDuration
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6822389316435521239, guid: df86e656bd9543e4f8df89bf3800175e, type: 3}
       propertyPath: m_Name

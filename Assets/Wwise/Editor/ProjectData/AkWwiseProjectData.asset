@@ -317,8 +317,8 @@ MonoBehaviour:
         guid: c897a85f0f80004ab2ff18be3b2ae992
       Path: Events\Default Work Unit\Player _Actions\Player_Death
       maxAttenuation: 0
-      maxDuration: 4.586576
-      minDuration: 4.586576
+      maxDuration: 5.2783446
+      minDuration: 5.2783446
     - name: Player_Jump
       guid: e18fcc585c861a4c81dceb8c7dca5df1
       id: 1305133589

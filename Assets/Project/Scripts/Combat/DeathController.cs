@@ -119,7 +119,7 @@ public class DeathController : MonoBehaviour
         // Setup saturation volume
         if (saturationVolume == null)
         {
-            saturationVolume = FindObjectOfType<Volume>();
+            saturationVolume = FindFirstObjectByType<Volume>();
             
             if (saturationVolume == null)
             {
@@ -294,7 +294,7 @@ public class DeathController : MonoBehaviour
     /// </summary>
     void FreezeAllEnemies()
     {
-        Enemy[] allEnemies = FindObjectsOfType<Enemy>();
+        Enemy[] allEnemies = FindObjectsByType<Enemy>(FindObjectsSortMode.None);
         foreach (Enemy enemy in allEnemies)
         {
             // Disable chase behavior
@@ -338,7 +338,7 @@ public class DeathController : MonoBehaviour
         {
             case MusicStopMethod.StopAll:
                 // Nuclear option: stops ALL sounds in the game
-                AkSoundEngine.StopAll();
+                AkUnitySoundEngine.StopAll();
                 if (showDebugInfo)
                     Debug.Log("Stopped ALL audio globally");
                 break;
@@ -346,9 +346,9 @@ public class DeathController : MonoBehaviour
             case MusicStopMethod.StopAllMusic:
                 // Stop all music buses (recommended - stops only music, keeps SFX)
                 // This stops the "Master Audio Bus" > "Music" bus
-                AkSoundEngine.SetRTPCValue("Volume_Music", 0f);
+                AkUnitySoundEngine.SetRTPCValue("Volume_Music", 0f);
                 // Or stop by bus name if you have it set up:
-                // AkSoundEngine.StopAll(gameObject, (int)AkGameObjPosOffsetMode.AK_SetBankLoadIOSettings);
+                // AkUnitySoundEngine.StopAll(gameObject, (int)AkGameObjPosOffsetMode.AK_SetBankLoadIOSettings);
                 
                 if (showDebugInfo)
                     Debug.Log("Stopped all music via music bus");
@@ -388,7 +388,7 @@ public class DeathController : MonoBehaviour
                 {
                     // Get the event ID and stop all playing instances
                     uint eventId = bgmMusicEvent.Id;
-                    AkSoundEngine.StopPlayingID(eventId);
+                    AkUnitySoundEngine.StopPlayingID(eventId);
                     
                     if (showDebugInfo)
                         Debug.Log($"Stopped all instances of event ID {eventId} globally");
