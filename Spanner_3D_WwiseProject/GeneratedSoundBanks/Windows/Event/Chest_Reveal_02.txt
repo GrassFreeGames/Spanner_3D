@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4062859617	Chest_Reveal_02			\Default Work Unit\UI\Chest\Chest_Reveal_02	
+

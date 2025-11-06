@@ -90,6 +90,45 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Folder Name="Chest" ID="{EDCFF61F-9365-4A14-ABEA-9CD4814ECD7D}" ShortID="90579655">
+							<ChildrenList>
+								<Event Name="Chest_Open" ID="{330F94BF-B10E-4607-A244-4612F1201573}">
+									<ChildrenList>
+										<Action Name="" ID="{2829015A-3FA9-4C6B-A454-732479CA5E07}" ShortID="9200832">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Chest_Open" ID="{4A691EE4-4075-4164-86BB-14216F88ECF3}" WorkUnitID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Chest_Reveal_01" ID="{8C3E0A49-12A7-401A-8CD0-6F502C66C514}"/>
+								<Event Name="Chest_Reveal_02" ID="{3C604F22-BB14-44E2-A61C-D6EA0A6BB544}">
+									<ChildrenList>
+										<Action Name="" ID="{BEC29A8F-4E6B-402D-84F9-9A4C8F7F1A46}" ShortID="745865780">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Chest_Reveal_2" ID="{D19131E6-360D-482E-B1F9-058CA829AACE}" WorkUnitID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Chest_Reveal_03" ID="{CC54B4C6-315E-4103-BB8E-85205CBB2B67}">
+									<ChildrenList>
+										<Action Name="" ID="{414AFFCB-3770-4EAD-8C8C-B86C75399988}" ShortID="937826986">
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Chest_Reveal_3" ID="{AF9CED5C-B3FE-4667-AFEA-85332D74E948}" WorkUnitID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Chest_Reveal_04" ID="{5491380B-BD48-4D6C-94FF-097365BDA4C3}"/>
+							</ChildrenList>
+						</Folder>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Weapons" ID="{BAC171B7-7D40-432A-AEEC-C61F5B85B8E4}" ShortID="625354996">

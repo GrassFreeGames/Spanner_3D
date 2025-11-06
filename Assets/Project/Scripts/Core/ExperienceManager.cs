@@ -13,6 +13,10 @@ public class ExperienceManager : MonoBehaviour
     [Tooltip("XP required to reach level 2")]
     public float baseExpRequirement = 15f;
     
+    [Header("Audio")]
+    [Tooltip("Wwise event to play when player levels up")]
+    public AK.Wwise.Event levelUpSound;
+    
     [Header("Debug")]
     public bool showDebugInfo = false;
     
@@ -80,6 +84,12 @@ public class ExperienceManager : MonoBehaviour
         
         // Increase level
         _currentLevel++;
+        
+        // Play level up sound
+        if (levelUpSound != null)
+        {
+            levelUpSound.Post(gameObject);
+        }
         
         // Calculate next level requirement
         // Formula: (currentLevelReq * 1.05) + 5

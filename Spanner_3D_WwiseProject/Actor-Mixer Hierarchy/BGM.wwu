@@ -46,6 +46,11 @@
 												<Value>-1</Value>
 											</ValueList>
 										</Property>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>75</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -71,6 +76,11 @@
 								<Sound Name="Undertale_OST_Bonetrousle" ID="{9C303873-B427-4901-A63F-F918E1A3CC02}" ShortID="964216136">
 									<PropertyList>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Weight" Type="Real64">
+											<ValueList>
+												<Value>25</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">

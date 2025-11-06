@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{0FB52ECE-02A6-467D-93F5-0A7A338BEA51}",
     "Language": "SFX",
-    "Hash": "{A9E0FF05-DE03-3C46-9DC2-06E0DE0A9499}",
+    "Hash": "{4264EBD1-5B2E-0A00-275E-0FD08DA9AA5D}",
     "ObjectPath": "Level_Up",
     "ShortName": "Level_Up",
     "Path": "Event/Level_Up.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{2A71595E-47C9-A58D-4A3D-1C04EDCA5F79}"
+  "FileHash": "{820E55D4-30ED-6C61-018B-F50B963DD611}"
  }
 }

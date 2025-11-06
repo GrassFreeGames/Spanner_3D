@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "4062859618",
+    "Type": "Event",
+    "GUID": "{8C3E0A49-12A7-401A-8CD0-6F502C66C514}",
+    "Language": "SFX",
+    "Hash": "{D4D36549-E763-E989-075C-47023875B65F}",
+    "ObjectPath": "Chest_Reveal_01",
+    "ShortName": "Chest_Reveal_01",
+    "Path": "Event/Chest_Reveal_01.bnk",
+    "Events": [
+     {
+      "Id": "4062859618",
+      "Name": "Chest_Reveal_01",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Chest\\Chest_Reveal_01",
+      "GUID": "{8C3E0A49-12A7-401A-8CD0-6F502C66C514}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{621CFE31-59E1-130E-9799-0D428B15A1F0}"
+ }
+}
