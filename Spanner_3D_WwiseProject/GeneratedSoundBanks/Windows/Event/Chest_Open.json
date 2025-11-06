@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2728948375",
+    "Type": "Event",
+    "GUID": "{330F94BF-B10E-4607-A244-4612F1201573}",
+    "Language": "SFX",
+    "Hash": "{3685B02A-856B-7D49-5ED9-4711306358FD}",
+    "ObjectPath": "Chest_Open",
+    "ShortName": "Chest_Open",
+    "Path": "Event/Chest_Open.bnk",
+    "Media": [
+     {
+      "Id": "846936482",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chest_Open.wav",
+      "Path": "Media/846936482.wem",
+      "CachePath": "67/{67EE0773-0155-9354-C4C0-9D170C7CAF19}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2728948375",
+      "Name": "Chest_Open",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\Chest\\Chest_Open",
+      "GUID": "{330F94BF-B10E-4607-A244-4612F1201573}",
+      "DurationType": "OneShot",
+      "DurationMin": "7.5939684",
+      "DurationMax": "7.5939684",
+      "MediaRefs": [
+       {
+        "Id": "846936482"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2928BCEE-666F-D89A-3E74-BC668B9C84BF}"
+ }
+}

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{95584DA0-00DF-4B5D-AE93-78567B2CC75B}",
     "Language": "SFX",
-    "Hash": "{B94AEDE5-21FF-3B62-7C17-06FA5B74FC7E}",
+    "Hash": "{279EA245-843E-4DD0-01AA-0136E015ECB3}",
     "ObjectPath": "Item_Purchase",
     "ShortName": "Item_Purchase",
     "Path": "Event/Item_Purchase.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{BDD09FB7-B246-6EF1-7DF5-07A8BDB9637B}"
+  "FileHash": "{1A393DD6-F9F7-FC91-D1BF-FBB92E346541}"
  }
 }

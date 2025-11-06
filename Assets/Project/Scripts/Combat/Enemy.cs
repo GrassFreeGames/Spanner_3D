@@ -201,6 +201,13 @@ public class Enemy : MonoBehaviour
             statsTracker.RegisterKill();
         }
         
+        // Award credits to player
+        CurrencyManager currency = CurrencyManager.Instance;
+        if (currency != null)
+        {
+            currency.AddCredits(1); // Each enemy awards 1 credit
+        }
+        
         // Get ground position below enemy with hover offset
         Vector3 dropPosition = GetGroundPositionBelow(transform.position);
         

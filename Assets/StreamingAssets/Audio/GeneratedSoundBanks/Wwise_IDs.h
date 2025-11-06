@@ -19,6 +19,11 @@ namespace AK
         static const AkUniqueID BLASTERV3_FIRE = 2401202452U;
         static const AkUniqueID BOTTLE_SMASH = 3295549328U;
         static const AkUniqueID CHARGING_TOTEM = 2008779410U;
+        static const AkUniqueID CHEST_OPEN = 2728948375U;
+        static const AkUniqueID CHEST_REVEAL_01 = 4062859618U;
+        static const AkUniqueID CHEST_REVEAL_02 = 4062859617U;
+        static const AkUniqueID CHEST_REVEAL_03 = 4062859616U;
+        static const AkUniqueID CHEST_REVEAL_04 = 4062859623U;
         static const AkUniqueID ITEM_PURCHASE = 946567574U;
         static const AkUniqueID LEVEL_UP = 2145291615U;
         static const AkUniqueID PLAYER_DEATH = 3083087645U;

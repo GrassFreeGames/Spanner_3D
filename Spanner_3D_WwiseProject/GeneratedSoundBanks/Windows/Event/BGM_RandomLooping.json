@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{52A8D2CB-B97F-44A6-AF96-A04ED496E3C5}",
     "Language": "SFX",
-    "Hash": "{CFCE976E-6DBC-4916-09DF-454FE33C3F45}",
+    "Hash": "{ABD493D1-095F-E5E4-47E3-E48CA611C27C}",
     "ObjectPath": "BGM_RandomLooping",
     "ShortName": "BGM_RandomLooping",
     "Path": "Event/BGM_RandomLooping.bnk",
@@ -65,6 +65,6 @@
     ]
    }
   ],
-  "FileHash": "{2F3310E0-A60D-0239-2BCB-B4078AB4EAC1}"
+  "FileHash": "{8586E7D1-016E-9563-6D44-D443D700CBD7}"
  }
 }

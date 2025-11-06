@@ -80,7 +80,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d3164fe8003b2d4b843c874de71a3d51
     GuidInternal: 
-    m_lastTime: -8584392907082749766
+    m_lastTime: -8584392055511850613
     List:
     - name: BGM
       guid: 8d308b093526e74bb3a5eb67672dcf6f
@@ -239,6 +239,141 @@ MonoBehaviour:
         ObjectType: 3
         guid: 1ac57703f4f50d4aa093cc16eda4c2f9
       Path: Events\Default Work Unit\Player _Actions\Charge_Totem\Charging_Totem
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Chest
+      guid: 1ff6cfed6593144aabea9cd4814ecd7d
+      id: 14239492
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Chest
+        ObjectType: 4
+        guid: 1ff6cfed6593144aabea9cd4814ecd7d
+      Path: Events\Default Work Unit\UI\Chest
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Chest_Open
+      guid: bf940f330eb10746a2444612f1201573
+      id: 2728948375
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Chest
+        ObjectType: 4
+        guid: 1ff6cfed6593144aabea9cd4814ecd7d
+      - ElementName: Chest_Open
+        ObjectType: 3
+        guid: bf940f330eb10746a2444612f1201573
+      Path: Events\Default Work Unit\UI\Chest\Chest_Open
+      maxAttenuation: 0
+      maxDuration: 7.5939684
+      minDuration: 7.5939684
+    - name: Chest_Reveal_01
+      guid: 490a3e8ca7121a408cd06f502c66c514
+      id: 4062859618
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Chest
+        ObjectType: 4
+        guid: 1ff6cfed6593144aabea9cd4814ecd7d
+      - ElementName: Chest_Reveal_01
+        ObjectType: 3
+        guid: 490a3e8ca7121a408cd06f502c66c514
+      Path: Events\Default Work Unit\UI\Chest\Chest_Reveal_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Chest_Reveal_02
+      guid: 224f603c14bbe244a61cd6ea0a6bb544
+      id: 4062859617
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Chest
+        ObjectType: 4
+        guid: 1ff6cfed6593144aabea9cd4814ecd7d
+      - ElementName: Chest_Reveal_02
+        ObjectType: 3
+        guid: 224f603c14bbe244a61cd6ea0a6bb544
+      Path: Events\Default Work Unit\UI\Chest\Chest_Reveal_02
+      maxAttenuation: 0
+      maxDuration: 7.809864
+      minDuration: 7.809864
+    - name: Chest_Reveal_03
+      guid: c6b454cc5e310341bb8e85205cbb2b67
+      id: 4062859616
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Chest
+        ObjectType: 4
+        guid: 1ff6cfed6593144aabea9cd4814ecd7d
+      - ElementName: Chest_Reveal_03
+        ObjectType: 3
+        guid: c6b454cc5e310341bb8e85205cbb2b67
+      Path: Events\Default Work Unit\UI\Chest\Chest_Reveal_03
+      maxAttenuation: 0
+      maxDuration: 7.809864
+      minDuration: 7.809864
+    - name: Chest_Reveal_04
+      guid: 0b38915448bd6c4d94ff097365bda4c3
+      id: 4062859623
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: UI
+        ObjectType: 4
+        guid: 42e7bfcda3286345a7c9a3b8ea6ba7e7
+      - ElementName: Chest
+        ObjectType: 4
+        guid: 1ff6cfed6593144aabea9cd4814ecd7d
+      - ElementName: Chest_Reveal_04
+        ObjectType: 3
+        guid: 0b38915448bd6c4d94ff097365bda4c3
+      Path: Events\Default Work Unit\UI\Chest\Chest_Reveal_04
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -562,7 +697,7 @@ MonoBehaviour:
     m_lastTime: -8584393692851615238
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000300000004000000050000000600000007000000080000000b0000002700000028000000460000004700000049000000660000006700000068000000b4000000b5000000ba000000
+  ExpandedWaapiItemIds: 01000000030000000400000005000000060000000700000008000000090000000b0000002700000028000000460000004700000048000000490000004b000000660000006700000068000000b4000000b5000000ba0000008f010000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0
