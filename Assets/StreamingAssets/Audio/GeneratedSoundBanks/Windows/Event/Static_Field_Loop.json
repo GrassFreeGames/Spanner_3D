@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2690858951",
+    "Type": "Event",
+    "GUID": "{D8BCAD1B-480C-450E-953D-A2F1D04EBF4B}",
+    "Language": "SFX",
+    "Hash": "{41CC8560-122A-42CC-FA4B-074D118E8685}",
+    "ObjectPath": "Static_Field_Loop",
+    "ShortName": "Static_Field_Loop",
+    "Path": "Event/Static_Field_Loop.bnk",
+    "Media": [
+     {
+      "Id": "726691781",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Static_Field_Loop.wav",
+      "Path": "Media/726691781.wem",
+      "CachePath": "E7/{E7F55B5C-8F30-2936-78BE-8B6CD23D6C75}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2690858951",
+      "Name": "Static_Field_Loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\Static_Field_Loop",
+      "GUID": "{D8BCAD1B-480C-450E-953D-A2F1D04EBF4B}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "726691781"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{53A0ABCC-A620-18D3-C571-41F3F6654AC0}"
+ }
+}

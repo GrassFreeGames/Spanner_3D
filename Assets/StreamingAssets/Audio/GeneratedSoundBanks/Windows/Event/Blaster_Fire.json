@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D03724AA-2EAB-4CED-A47F-315D7B513288}",
     "Language": "SFX",
-    "Hash": "{20D7B85A-D793-0C96-3947-B5EE41BD13B4}",
+    "Hash": "{5EA055DB-AB48-7355-2993-D507BE2C69D6}",
     "ObjectPath": "Blaster_Fire",
     "ShortName": "Blaster_Fire",
     "Path": "Event/Blaster_Fire.bnk",
@@ -67,6 +67,6 @@
     ]
    }
   ],
-  "FileHash": "{315D2903-6E99-8AA0-E294-70866CCDCB61}"
+  "FileHash": "{A7B684B1-0885-EFDF-611D-128BCE0F02D5}"
  }
 }

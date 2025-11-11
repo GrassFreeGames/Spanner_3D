@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81e3443abbc53754591e44ef59b594bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AttackController
-  currentAttack: {fileID: 11400000, guid: 3082ab83cdd3fc344b4e99f2dee31916, type: 2}
+  currentAttack: {fileID: 0}
   projectileSpawnPoint: {fileID: 0}
   showDebugInfo: 0
 --- !u!114 &2374643018210269670
@@ -278,3 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStats
   pickupRadius: 3
   maxHealth: 100
+  invulnerabilityDuration: 0
+  enemyKickForce: 5
+  enemyKickDuration: 0.1
+  showDebugInfo: 0

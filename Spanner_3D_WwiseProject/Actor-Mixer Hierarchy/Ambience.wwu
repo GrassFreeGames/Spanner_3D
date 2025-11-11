@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3CE76A6B-9F1A-495C-8EB4-44E2790943EC}" SchemaVersion="123" RootDocumentID="{1D7152A5-067B-45D1-9952-92E2DE031C9D}" ParentDocumentID="{1D7152A5-067B-45D1-9952-92E2DE031C9D}">
+	<AudioObjects>
+		<WorkUnit Name="Ambience" ID="{3CE76A6B-9F1A-495C-8EB4-44E2790943EC}" OwnerID="{8499217F-3093-4880-8958-2838F4AC2494}" PersistMode="Nested">
+			<ChildrenList>
+				<ActorMixer Name="Ambience" ID="{0D3A0A76-DC72-4868-9CBD-6DB00233E090}" ShortID="251620459">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4AAE170C-09B9-4540-B282-913E2A8D57B8}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{BF556909-6C1E-42E0-8360-CA27B606D02F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Folder Name="Outskirts" ID="{D6D45A26-6929-4216-AF2F-8C602DEBC4FD}" ShortID="796805967"/>
+						<Folder Name="Wasteland" ID="{8F862B08-B1D3-476A-8E95-DB90A03A5209}" ShortID="68975705"/>
+						<Folder Name="City" ID="{C5CF3FDB-1442-4466-B52B-43F0EB538A55}" ShortID="381399492"/>
+						<Folder Name="Industrial" ID="{447280B1-0949-4907-B2E7-D934C87B470B}" ShortID="425381023"/>
+					</ChildrenList>
+				</ActorMixer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

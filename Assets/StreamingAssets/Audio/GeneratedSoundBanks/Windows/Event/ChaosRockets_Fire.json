@@ -1,0 +1,108 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3932074957",
+    "Type": "Event",
+    "GUID": "{7C7FA143-5D53-45FB-ACFD-878AAB24B98F}",
+    "Language": "SFX",
+    "Hash": "{AB683844-6F10-F738-15DB-0E1E26E41BD8}",
+    "ObjectPath": "ChaosRockets_Fire",
+    "ShortName": "ChaosRockets_Fire",
+    "Path": "Event/ChaosRockets_Fire.bnk",
+    "Media": [
+     {
+      "Id": "235165549",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chaos_Rocket_Fire_04.wav",
+      "Path": "Media/235165549.wem",
+      "CachePath": "8D/{8D36717B-7010-ADB3-0FB6-7A0E2AD333D8}.wem"
+     },
+     {
+      "Id": "238386234",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chaos_Rocket_Fire_11.wav",
+      "Path": "Media/238386234.wem",
+      "CachePath": "60/{606AD290-8894-557F-1A1C-353BC1546FC3}.wem"
+     },
+     {
+      "Id": "396606060",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chaos_Rocket_Fire_02.wav",
+      "Path": "Media/396606060.wem",
+      "CachePath": "90/{9090F28D-E386-6698-C626-6608C02CCF6B}.wem"
+     },
+     {
+      "Id": "937352582",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chaos_Rocket_Fire_13.wav",
+      "Path": "Media/937352582.wem",
+      "CachePath": "B7/{B7680DDC-694A-BAEB-2962-27E5417EB5A3}.wem"
+     },
+     {
+      "Id": "1008712860",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chaos_Rocket_Fire_12.wav",
+      "Path": "Media/1008712860.wem",
+      "CachePath": "A1/{A12B18C1-00CA-6165-2FAE-287BD248D117}.wem"
+     },
+     {
+      "Id": "1009796508",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chaos_Rocket_Fire_10.wav",
+      "Path": "Media/1009796508.wem",
+      "CachePath": "25/{25DB18AD-D837-12A6-BA49-A6E8568EDA43}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3932074957",
+      "Name": "ChaosRockets_Fire",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\ChaosRockets_Fire",
+      "GUID": "{7C7FA143-5D53-45FB-ACFD-878AAB24B98F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6184565",
+      "DurationMax": "0.77920634",
+      "MediaRefs": [
+       {
+        "Id": "235165549"
+       },
+       {
+        "Id": "238386234"
+       },
+       {
+        "Id": "396606060"
+       },
+       {
+        "Id": "937352582"
+       },
+       {
+        "Id": "1008712860"
+       },
+       {
+        "Id": "1009796508"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{B88E3B4B-F1B6-619E-EFBE-5B9BFD2F7691}"
+ }
+}

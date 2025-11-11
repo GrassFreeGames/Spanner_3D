@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	3963821017	BGM_RandomLooping			\Default Work Unit\BGM\BGM_RandomLooping	
-

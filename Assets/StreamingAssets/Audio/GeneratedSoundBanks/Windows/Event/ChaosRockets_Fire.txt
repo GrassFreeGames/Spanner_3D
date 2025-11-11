@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3932074957	ChaosRockets_Fire			\Default Work Unit\Weapons\ChaosRockets_Fire	
+
