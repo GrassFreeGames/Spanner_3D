@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6182721f94ed0f40bfc7059131e64d0, type: 3}
+  m_Name: EnemyData_BasicBox
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyData
+  enemyName: Enemy_Box
+  enemyPrefab: {fileID: 1249839511936253592, guid: 25d35cdd9a00f9b469a2f5ca396c1f21, type: 3}
+  maxHealth: 10
+  moveSpeed: 5
+  damage: 5
+  spawnDepth: 1.5
+  sizeMultiplier: 1.1
+  riseSpeed: 4
+  pauseDuration: 0.1
+  spawnSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  xpTokenPrefab: {fileID: 4063370367286278256, guid: 4401d2ecab2b50248a2d6b8283cb5ff1, type: 3}
+  powerTokenPrefab: {fileID: 4063370367286278256, guid: 8686f4a983c3fb149b3045f21dc14482, type: 3}
+  powerTokenDropChance: 0.04
+  tokenHoverHeight: 0.3
+  scoreValue: 10
+  weaponDropPrefab: {fileID: 7829261911486638468, guid: 014909a2b22fe8b4cb03eaebb350840e, type: 3}
+  weaponDropChance: 0.02
+  weaponDropDatabase: {fileID: 11400000, guid: 32bb4a7b4be47d44398154c36a5c0d03, type: 2}

@@ -1,0 +1,144 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "498414234",
+    "Type": "Event",
+    "GUID": "{8589F0F1-3687-4618-B01F-BBC657923E0D}",
+    "Language": "SFX",
+    "Hash": "{038E06DA-F3A2-E3E2-8CA1-1E7F52D3BE22}",
+    "ObjectPath": "Static_Field_Zap",
+    "ShortName": "Static_Field_Zap",
+    "Path": "Event/Static_Field_Zap.bnk",
+    "Media": [
+     {
+      "Id": "236953302",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Static_Field_Zap-009.wav",
+      "Path": "Media/236953302.wem",
+      "CachePath": "D4/{D41FD73E-465C-C8B9-699F-D8D0478DDB04}.wem"
+     },
+     {
+      "Id": "279080860",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Static_Field_Zap-004.wav",
+      "Path": "Media/279080860.wem",
+      "CachePath": "B6/{B62EF1D0-0C6A-48DD-8E92-BFE0640D5769}.wem"
+     },
+     {
+      "Id": "313595257",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Static_Field_Zap-006.wav",
+      "Path": "Media/313595257.wem",
+      "CachePath": "82/{82A9D601-28DF-9228-CB0D-AF14224A17D9}.wem"
+     },
+     {
+      "Id": "587292995",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Static_Field_Zap-001.wav",
+      "Path": "Media/587292995.wem",
+      "CachePath": "91/{91E1A0D7-3824-33F8-C44B-530AF4825AEE}.wem"
+     },
+     {
+      "Id": "614473773",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Static_Field_Zap-005.wav",
+      "Path": "Media/614473773.wem",
+      "CachePath": "FA/{FA948A8D-8BF8-3438-7B4D-31D83BF8F553}.wem"
+     },
+     {
+      "Id": "627343229",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Static_Field_Zap-002.wav",
+      "Path": "Media/627343229.wem",
+      "CachePath": "66/{6604C07F-F998-A4B0-76DB-226772EF6706}.wem"
+     },
+     {
+      "Id": "725672335",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Static_Field_Zap-008.wav",
+      "Path": "Media/725672335.wem",
+      "CachePath": "D1/{D13FA637-0A24-25D6-2439-B0CD370520B0}.wem"
+     },
+     {
+      "Id": "905218748",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Static_Field_Zap-003.wav",
+      "Path": "Media/905218748.wem",
+      "CachePath": "ED/{ED9FAA23-484E-76BB-F209-B5869E295F36}.wem"
+     },
+     {
+      "Id": "1027207925",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Static_Field_Zap-007.wav",
+      "Path": "Media/1027207925.wem",
+      "CachePath": "F2/{F22A77F3-2171-19C7-BB41-426CFC89AF86}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "498414234",
+      "Name": "Static_Field_Zap",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\Static_Field_Zap",
+      "GUID": "{8589F0F1-3687-4618-B01F-BBC657923E0D}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.092420936",
+      "DurationMax": "0.29964653",
+      "MediaRefs": [
+       {
+        "Id": "236953302"
+       },
+       {
+        "Id": "279080860"
+       },
+       {
+        "Id": "313595257"
+       },
+       {
+        "Id": "587292995"
+       },
+       {
+        "Id": "614473773"
+       },
+       {
+        "Id": "627343229"
+       },
+       {
+        "Id": "725672335"
+       },
+       {
+        "Id": "905218748"
+       },
+       {
+        "Id": "1027207925"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{608B4C5A-DC74-EB0D-A5B8-E63B0CAED8B7}"
+ }
+}

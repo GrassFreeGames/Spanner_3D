@@ -80,7 +80,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: d3164fe8003b2d4b843c874de71a3d51
     GuidInternal: 
-    m_lastTime: -8584392055511850613
+    m_lastTime: -8584391233324756280
     List:
     - name: BGM
       guid: 8d308b093526e74bb3a5eb67672dcf6f
@@ -199,6 +199,86 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Cannon_Fire
+      guid: 1c7a1401fab3d64481c72faaa3d8c816
+      id: 155513425
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      - ElementName: Cannon_Fire
+        ObjectType: 3
+        guid: 1c7a1401fab3d64481c72faaa3d8c816
+      Path: Events\Default Work Unit\Weapons\Cannon_Fire
+      maxAttenuation: 0
+      maxDuration: 1.4010617
+      minDuration: 1.1781477
+    - name: Cannon_Hit_Thud
+      guid: 2ecf79879ad31c4badfd4054c0e3713f
+      id: 3069862824
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      - ElementName: Cannon_Hit_Thud
+        ObjectType: 3
+        guid: 2ecf79879ad31c4badfd4054c0e3713f
+      Path: Events\Default Work Unit\Weapons\Cannon_Hit_Thud
+      maxAttenuation: 0
+      maxDuration: 1.4010617
+      minDuration: 1.1781477
+    - name: ChaosRockets_Explode
+      guid: cdcd054381596b4092d6674a946a16a0
+      id: 1794467620
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      - ElementName: ChaosRockets_Explode
+        ObjectType: 3
+        guid: cdcd054381596b4092d6674a946a16a0
+      Path: Events\Default Work Unit\Weapons\ChaosRockets_Explode
+      maxAttenuation: 100
+      maxDuration: 0.9508093
+      minDuration: 0.75465786
+    - name: ChaosRockets_Fire
+      guid: 43a17f7c535dfb45acfd878aab24b98f
+      id: 3932074957
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      - ElementName: ChaosRockets_Fire
+        ObjectType: 3
+        guid: 43a17f7c535dfb45acfd878aab24b98f
+      Path: Events\Default Work Unit\Weapons\ChaosRockets_Fire
+      maxAttenuation: 0
+      maxDuration: 0.77920634
+      minDuration: 0.6184565
     - name: Charge_Totem
       guid: 918d8fdd92b68f469e224c6cf097ba1e
       id: 1925608523
@@ -377,6 +457,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: EnergySword_Swipe_Left
+      guid: 0277cc802115024686da23963f8cb170
+      id: 4175829941
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      - ElementName: EnergySword_Swipe_Left
+        ObjectType: 3
+        guid: 0277cc802115024686da23963f8cb170
+      Path: Events\Default Work Unit\Weapons\EnergySword_Swipe_Left
+      maxAttenuation: 0
+      maxDuration: 0.6415697
+      minDuration: 0.5394936
+    - name: EnergySword_Swipe_Right
+      guid: de9cc79033912d41966e933fc51ed9b4
+      id: 2418700704
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      - ElementName: EnergySword_Swipe_Right
+        ObjectType: 3
+        guid: de9cc79033912d41966e933fc51ed9b4
+      Path: Events\Default Work Unit\Weapons\EnergySword_Swipe_Right
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Item_Purchase
       guid: a04d5895df005d4bae9378567b2cc75b
       id: 946567574
@@ -494,6 +614,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3.597052
       minDuration: 3.597052
+    - name: Static_Field_Loop
+      guid: 1badbcd80c480e45953da2f1d04ebf4b
+      id: 2690858951
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      - ElementName: Static_Field_Loop
+        ObjectType: 3
+        guid: 1badbcd80c480e45953da2f1d04ebf4b
+      Path: Events\Default Work Unit\Weapons\Static_Field_Loop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Static_Field_Zap
+      guid: f1f0898587361846b01fbbc657923e0d
+      id: 498414234
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: d3164fe8003b2d4b843c874de71a3d51
+      - ElementName: Weapons
+        ObjectType: 4
+        guid: b771c1ba407d2a43aeecc61f5b85b8e4
+      - ElementName: Static_Field_Zap
+        ObjectType: 3
+        guid: f1f0898587361846b01fbbc657923e0d
+      Path: Events\Default Work Unit\Weapons\Static_Field_Zap
+      maxAttenuation: 0
+      maxDuration: 0.29964653
+      minDuration: 0.092420936
     - name: Totem_Finish
       guid: 6979e6b9c69b1447b97e3773356c4de3
       id: 39357614
@@ -697,7 +857,7 @@ MonoBehaviour:
     m_lastTime: -8584393692851615238
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000030000000400000005000000060000000700000008000000090000000b0000002700000028000000460000004700000048000000490000004b000000660000006700000068000000b4000000b5000000ba0000008f010000
+  ExpandedWaapiItemIds: 01000000030000000400000005000000060000000a0000000b0000000e00000027000000280000003200000033000000460000004700000048000000490000004b000000660000006700000068000000b4000000b5000000ba0000008f0100009f670000a0670000a4670000
   AutoSyncSelection: 1
   autoPopulateEnabled: 1
   currentDataSource: 0

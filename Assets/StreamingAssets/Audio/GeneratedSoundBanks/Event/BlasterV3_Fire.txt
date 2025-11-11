@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	2401202452	BlasterV3_Fire			\Default Work Unit\Weapons\BlasterV3_Fire	
-

@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	4175829941	EnergySword_Swipe_Left			\Default Work Unit\Weapons\EnergySword_Swipe_Left	
+

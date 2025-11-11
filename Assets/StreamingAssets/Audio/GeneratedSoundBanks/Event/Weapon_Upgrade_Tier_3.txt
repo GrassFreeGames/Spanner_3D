@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	3850320117	Weapon_Upgrade_Tier_3			\Default Work Unit\UI\Weapon_Upgrades\Weapon_Upgrade_Tier_3	
-

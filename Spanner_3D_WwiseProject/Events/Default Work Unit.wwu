@@ -155,6 +155,84 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="ChaosRockets_Fire" ID="{7C7FA143-5D53-45FB-ACFD-878AAB24B98F}">
+							<ChildrenList>
+								<Action Name="" ID="{ECA8D2EA-FBD0-4C66-9BEA-FDE08E668EBC}" ShortID="839306379">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rocket_Fire" ID="{305B3B59-92A2-41D7-9DE3-0C01346D1BB5}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ChaosRockets_Explode" ID="{4305CDCD-5981-406B-92D6-674A946A16A0}">
+							<ChildrenList>
+								<Action Name="" ID="{2465B25D-E3F2-410A-9194-7A03D72B3D01}" ShortID="496727245">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rocket_Explode" ID="{1F35EDD7-125C-4EB2-9296-DEAB3DD57D61}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Static_Field_Zap" ID="{8589F0F1-3687-4618-B01F-BBC657923E0D}">
+							<ChildrenList>
+								<Action Name="" ID="{B61449EF-59B0-4887-88F5-C87F54F83320}" ShortID="97002413">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Static_Field_Hit" ID="{83EC9EC9-9AAB-4423-A3DC-DEF83F180641}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Cannon_Fire" ID="{01147A1C-B3FA-44D6-81C7-2FAAA3D8C816}">
+							<ChildrenList>
+								<Action Name="" ID="{E03EA441-6A64-4C7F-BEBC-36079907280F}" ShortID="1028999590">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cannon_Fire" ID="{B4599659-0119-400A-8A14-0934AACFA0E4}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="EnergySword_Swipe_Left" ID="{80CC7702-1521-4602-86DA-23963F8CB170}">
+							<ChildrenList>
+								<Action Name="" ID="{E50DB165-8C90-481C-A8AB-1AE97A26078E}" ShortID="1063734724">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="EnergySword_Swipe" ID="{DF49D2E7-3615-4003-ABBA-66108F3FA273}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="EnergySword_Swipe_Right" ID="{90C79CDE-9133-412D-966E-933FC51ED9B4}"/>
+						<Event Name="Static_Field_Loop" ID="{D8BCAD1B-480C-450E-953D-A2F1D04EBF4B}">
+							<ChildrenList>
+								<Action Name="" ID="{27C3356C-832D-4496-A6EF-EA858EF61DFF}" ShortID="16576679">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Static_Field_Loop" ID="{1DC4DB42-6A97-4189-9834-ECE60442E9A8}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Cannon_Hit_Thud" ID="{8779CF2E-D39A-4B1C-ADFD-4054C0E3713F}">
+							<ChildrenList>
+								<Action Name="" ID="{ABBB431C-4A85-4264-B497-7719448E9CD8}" ShortID="617517887">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Cannon_Fire" ID="{B4599659-0119-400A-8A14-0934AACFA0E4}" WorkUnitID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Player _Actions" ID="{F5BDEE43-F389-49EC-B43D-45B931C3BCBA}" ShortID="852125998">

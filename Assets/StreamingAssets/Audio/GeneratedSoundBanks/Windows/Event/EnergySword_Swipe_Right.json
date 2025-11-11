@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "2418700704",
+    "Type": "Event",
+    "GUID": "{90C79CDE-9133-412D-966E-933FC51ED9B4}",
+    "Language": "SFX",
+    "Hash": "{A5E19E05-7174-5B69-2024-731F02DFC290}",
+    "ObjectPath": "EnergySword_Swipe_Right",
+    "ShortName": "EnergySword_Swipe_Right",
+    "Path": "Event/EnergySword_Swipe_Right.bnk",
+    "Events": [
+     {
+      "Id": "2418700704",
+      "Name": "EnergySword_Swipe_Right",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\EnergySword_Swipe_Right",
+      "GUID": "{90C79CDE-9133-412D-966E-933FC51ED9B4}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{74F393E6-4D83-AD9E-8796-65D64ECEBD02}"
+ }
+}

@@ -75,6 +75,11 @@
 								</Sound>
 								<Sound Name="Undertale_OST_Bonetrousle" ID="{9C303873-B427-4901-A63F-F918E1A3CC02}" ShortID="964216136">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Weight" Type="Real64">
 											<ValueList>
@@ -105,6 +110,11 @@
 								</Sound>
 								<Sound Name="Undertale_OST_MEGALOVANIA" ID="{F47EB670-A562-4F9E-8AF4-39ADB105C10C}" ShortID="286230400">
 									<PropertyList>
+										<Property Name="Inclusion" Type="bool">
+											<ValueList>
+												<Value>False</Value>
+											</ValueList>
+										</Property>
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>

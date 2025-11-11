@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	498414234	Static_Field_Zap			\Default Work Unit\Weapons\Static_Field_Zap	
+

@@ -228,6 +228,35 @@ public class Enemy : MonoBehaviour
                 Debug.Log($"{enemyData.enemyName} dropped a PowerToken!");
         }
         
+        // 1% chance to drop weapon crate
+        if (enemyData.weaponDropPrefab != null && Random.Range(0f, 1f) <= enemyData.weaponDropChance)
+        {
+            // Offset slightly so items don't overlap
+            Vector3 weaponDropPosition = dropPosition + new Vector3(1f, 0f, 0f);
+            GameObject weaponDrop = Instantiate(enemyData.weaponDropPrefab, weaponDropPosition, Quaternion.identity);
+            
+            // Assign random weapon to the crate
+            WeaponCratePickup cratePickup = weaponDrop.GetComponent<WeaponCratePickup>();
+            if (cratePickup != null && enemyData.weaponDropDatabase != null)
+            {
+                WeaponData randomWeapon = enemyData.weaponDropDatabase.GetRandomWeapon();
+                if (randomWeapon != null)
+                {
+                    cratePickup.weaponData = randomWeapon;
+                    
+                    if (showDebugInfo)
+                        Debug.Log($"{enemyData.enemyName} dropped weapon crate containing: {randomWeapon.weaponName}");
+                }
+            }
+            else if (cratePickup == null)
+            {
+                Debug.LogError($"Weapon drop prefab is missing WeaponCratePickup component!", weaponDrop);
+            }
+            
+            if (showDebugInfo)
+                Debug.Log($"{enemyData.enemyName} dropped a weapon crate at {weaponDropPosition}!");
+        }
+        
         // TODO: Death animation, VFX, etc.
         
         // Destroy enemy

@@ -7,6 +7,7 @@
 					<ChildrenList>
 						<WorkUnit Name="Combat" ID="{4BDE66CA-58F3-4F63-9BC7-A9C173BEFECD}" PersistMode="Reference"/>
 						<WorkUnit Name="UI" ID="{741504B3-9F7D-4EC8-8F9B-3BEE7434B119}" PersistMode="Reference"/>
+						<WorkUnit Name="Ambience" ID="{3CE76A6B-9F1A-495C-8EB4-44E2790943EC}" PersistMode="Reference"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="BGM" ID="{E48CC45A-580F-4488-A7BE-C153429E2F44}" ShortID="985632619">

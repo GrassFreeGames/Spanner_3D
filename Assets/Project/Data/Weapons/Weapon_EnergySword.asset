@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f4012d65f1849344a7ec3cf9a0eb596, type: 3}
+  m_Name: Weapon_EnergySword
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  weaponName: Energy Sword
+  description: Slashes enemies in front of you with alternating attacks
+  icon: {fileID: 21300000, guid: bec3d70c2f52edf4685efbc19bc1de73, type: 3}
+  tag1: 0
+  tag2: 3
+  tag3: 6
+  baseDamage: 15
+  baseAttackInterval: 1
+  baseProjectileCount: 1
+  baseRange: 4
+  damagePerLevel: 3
+  weaponType: 1
+  projectilePrefab: {fileID: 0}
+  fireSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d52515e7d70b0ef40a5602a6b9c0ad69, type: 2}

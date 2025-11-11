@@ -1,0 +1,84 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "4175829941",
+    "Type": "Event",
+    "GUID": "{80CC7702-1521-4602-86DA-23963F8CB170}",
+    "Language": "SFX",
+    "Hash": "{C71F7F53-DCA6-ABD2-40C7-F689AEF6E237}",
+    "ObjectPath": "EnergySword_Swipe_Left",
+    "ShortName": "EnergySword_Swipe_Left",
+    "Path": "Event/EnergySword_Swipe_Left.bnk",
+    "Media": [
+     {
+      "Id": "426931757",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Energy_Sword_Swing_04.wav",
+      "Path": "Media/426931757.wem",
+      "CachePath": "04/{04B8E959-E378-ABF6-B3AC-373B5727A3A6}.wem"
+     },
+     {
+      "Id": "628222333",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Energy_Sword_Swing_01.wav",
+      "Path": "Media/628222333.wem",
+      "CachePath": "89/{8929D92C-977F-1B23-EEC9-51B2035024DF}.wem"
+     },
+     {
+      "Id": "717680570",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Energy_Sword_Swing_05.wav",
+      "Path": "Media/717680570.wem",
+      "CachePath": "A7/{A783E6E8-DA9C-A383-2EE8-049557A47787}.wem"
+     },
+     {
+      "Id": "744123003",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Energy_Sword_Swing_02.wav",
+      "Path": "Media/744123003.wem",
+      "CachePath": "01/{01B45D30-2DBF-A44C-DE0A-07C0F1A9E8AA}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "4175829941",
+      "Name": "EnergySword_Swipe_Left",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\EnergySword_Swipe_Left",
+      "GUID": "{80CC7702-1521-4602-86DA-23963F8CB170}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.5394936",
+      "DurationMax": "0.6415697",
+      "MediaRefs": [
+       {
+        "Id": "426931757"
+       },
+       {
+        "Id": "628222333"
+       },
+       {
+        "Id": "717680570"
+       },
+       {
+        "Id": "744123003"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{932FCE11-EE51-B50C-8394-F83B34C1373A}"
+ }
+}

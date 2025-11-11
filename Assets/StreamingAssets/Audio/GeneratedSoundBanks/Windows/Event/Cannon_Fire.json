@@ -1,0 +1,72 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "155513425",
+    "Type": "Event",
+    "GUID": "{01147A1C-B3FA-44D6-81C7-2FAAA3D8C816}",
+    "Language": "SFX",
+    "Hash": "{9B37C974-649F-A156-FFE1-0ADBF7E52335}",
+    "ObjectPath": "Cannon_Fire",
+    "ShortName": "Cannon_Fire",
+    "Path": "Event/Cannon_Fire.bnk",
+    "Media": [
+     {
+      "Id": "79963871",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cannon_Fire_04.wav",
+      "Path": "Media/79963871.wem",
+      "CachePath": "4B/{4B644195-FA0F-744A-C174-4E4A673C6F6D}.wem"
+     },
+     {
+      "Id": "345079138",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cannon_Fire_02.wav",
+      "Path": "Media/345079138.wem",
+      "CachePath": "3D/{3DED9899-A7AD-363F-D89A-56D41DCE45FD}.wem"
+     },
+     {
+      "Id": "785156981",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Cannon_Fire_03.wav",
+      "Path": "Media/785156981.wem",
+      "CachePath": "1F/{1FC32AD3-0B1E-9D39-E2F6-98071E156518}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "155513425",
+      "Name": "Cannon_Fire",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\Cannon_Fire",
+      "GUID": "{01147A1C-B3FA-44D6-81C7-2FAAA3D8C816}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.1781477",
+      "DurationMax": "1.4010617",
+      "MediaRefs": [
+       {
+        "Id": "79963871"
+       },
+       {
+        "Id": "345079138"
+       },
+       {
+        "Id": "785156981"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{07D0696F-77E7-66D9-2067-A8AA79B411FF}"
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1794467620",
+    "Type": "Event",
+    "GUID": "{4305CDCD-5981-406B-92D6-674A946A16A0}",
+    "Language": "SFX",
+    "Hash": "{6D8C091F-F0E1-C0AB-9C0A-7B2E42104BEF}",
+    "ObjectPath": "ChaosRockets_Explode",
+    "ShortName": "ChaosRockets_Explode",
+    "Path": "Event/ChaosRockets_Explode.bnk",
+    "Media": [
+     {
+      "Id": "338186040",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chaos_Rocket_Explosion-002.wav",
+      "Path": "Media/338186040.wem",
+      "CachePath": "79/{79283F83-2DF5-4982-A954-B51E8E079760}.wem"
+     },
+     {
+      "Id": "412434104",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chaos_Rocket_Explosion-005.wav",
+      "Path": "Media/412434104.wem",
+      "CachePath": "C3/{C39DF5EE-71A3-F4FF-26C0-E858AC47344C}.wem"
+     },
+     {
+      "Id": "604213309",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chaos_Rocket_Explosion-006.wav",
+      "Path": "Media/604213309.wem",
+      "CachePath": "DC/{DC309ACA-6B16-5277-0D89-0D5BD260DF74}.wem"
+     },
+     {
+      "Id": "895482944",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Chaos_Rocket_Explosion-003.wav",
+      "Path": "Media/895482944.wem",
+      "CachePath": "31/{317F6500-EB64-A4F5-9BFC-CCF4DC79641F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1794467620",
+      "Name": "ChaosRockets_Explode",
+      "ObjectPath": "\\Events\\Default Work Unit\\Weapons\\ChaosRockets_Explode",
+      "GUID": "{4305CDCD-5981-406B-92D6-674A946A16A0}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0.75465786",
+      "DurationMax": "0.9508093",
+      "MediaRefs": [
+       {
+        "Id": "338186040"
+       },
+       {
+        "Id": "412434104"
+       },
+       {
+        "Id": "604213309"
+       },
+       {
+        "Id": "895482944"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CF014AFC-F7E4-404B-2B80-5FEF8CC93CBB}"
+ }
+}
