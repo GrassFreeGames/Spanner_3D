@@ -2,6 +2,13 @@
 
 
 
+## ⚠️ IMPORTANT: Manual Validation Required
+
+**Before every commit, run:** `check-commit.bat`
+
+This script checks for Unity files and reminds you of the workflow rules.
+
+---
 \## Prefab Editing Rules
 
 
