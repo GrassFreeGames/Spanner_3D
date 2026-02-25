@@ -13,7 +13,7 @@ namespace TeamWorkflow
         
         private static readonly string[] teamMembers = new string[]
         {
-            "Stu", "Select Your Name...", "Other"
+            "calschuss", "Select Your Name...", "Other"
         };
 
         [MenuItem("Team/Edit Prefab (Safe) %#P")] // Ctrl+Shift+P

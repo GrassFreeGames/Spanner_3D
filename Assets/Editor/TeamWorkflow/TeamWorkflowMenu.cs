@@ -247,7 +247,7 @@ namespace TeamWorkflow
                 "• Project validation\n" +
                 "• Workflow automation\n" +
                 "• Start/End of day workflows\n\n" +
-                "For help, contact your QA Lead (Stu).",
+                "For help, contact your QA Lead (calschuss).",
                 "OK"
             );
         }

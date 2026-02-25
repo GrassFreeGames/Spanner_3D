@@ -125,7 +125,7 @@ git push
 
 1\. \*\*DON'T panic\*\*
 
-2\. Ask Stu (QA Lead) for help immediately
+2\. Ask calschuss (QA Lead) for help immediately
 
 3\. Usually: pick one version, manually re-add changes in Unity
 
@@ -145,7 +145,7 @@ git push
 
 
 
-Ask Stu (QA Lead) in team chat or Discord
+Ask calschuss (QA Lead) in team chat or Discord
 
 
 
@@ -153,5 +153,5 @@ Ask Stu (QA Lead) in team chat or Discord
 
 Last updated: November 11, 2025  
 
-By: Stu (QA Lead)
+By: calschuss (QA Lead)
 
