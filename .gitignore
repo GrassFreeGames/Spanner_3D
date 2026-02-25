@@ -84,3 +84,4 @@ Assets/Wwise/Editor/ProjectData/AkWwiseProjectData.asset.meta
 !Assets/Wwise/*.wsettings
 !Assets/Wwise/*.akd
 !Assets/Wwise/Audio/
+claude.bat
